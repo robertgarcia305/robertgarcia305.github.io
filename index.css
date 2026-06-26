@@ -107,6 +107,13 @@ nav {
 
 .logo-wrap a {
     color: #0F0F0F;
+    font-family: semibold;
+}
+
+.logo-wrap p {
+    color: #0F0F0F;
+    font-family: semibold;
+    font-size: 20px;
 }
 
 .contact-button {
@@ -275,7 +282,7 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
 }
 
 .highlight {
@@ -386,7 +393,7 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
+    width: 57%;
     max-width: 1200px;
 }
 
@@ -462,10 +469,10 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
+    width: 60px;
     height: 50px;
     background-color: #121213;
-    border-radius: 40px;
+    border-radius: 50px;
     border: 1px solid rgb(111, 111, 111);
 }
 
@@ -641,6 +648,10 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
 
     .project-right {
         width: 100%;
+    }
+
+    .project-top {
+        width: 90%;
     }
 
     .hero-wrap {
