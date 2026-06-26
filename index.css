@@ -563,20 +563,19 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
 }
 
 .contact-card {
-    padding: 20px;
+    padding: 12px;
     border-radius: 20px;
     border: 1px solid black;
-    width: fit-content;
     margin: 20px 0px;
 }
 
 .contact-block {
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 
 .icon-wrap {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .contact-text-block p {
