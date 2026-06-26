@@ -187,12 +187,16 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     margin-top: 50px;
 }
 
-.hero-right, .hero-left {
-    width: 50%;
+.hero-left {
+    width: 40%;
+}
+
+.hero-right {
+    width: 60%;
 }
 
 .hero-left img {
-    width: 320px;
+    width: 250px;
     border-radius: 30px;
 }
 
@@ -608,7 +612,7 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     }
 
     .hero-wrap {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
     }
 
@@ -651,7 +655,7 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     }
 
     .hero-left {
-        width: 100%;
+        width: 60%;
     }
 
     .hero-wrap {
@@ -725,5 +729,25 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
 
     .mobile-nav-bottom ul li {
         margin: 10px 0px;
+    }
+
+    .project-left-description {
+        margin: 0px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-left img {
+        width: 200px;
+    }
+
+    .hero-left {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-wrap {
+        flex-direction: column;
     }
 }
