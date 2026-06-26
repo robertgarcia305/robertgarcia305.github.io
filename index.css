@@ -5,17 +5,17 @@
 
 @font-face {
     font-family: paragraphs;
-    src: url(fonts/Roboto_Mono/static/RobotoMono-Regular.ttf);
+    src: url(fonts/Inter/static/Inter_18pt-Regular.ttf);
 }
 
 @font-face {
     font-family: semibold;
-    src: url(fonts/Roboto_Mono/static/RobotoMono-SemiBold.ttf);
+    src: url(fonts/Inter/static/Inter_18pt-SemiBold.ttf);
 }
 
 @font-face {
     font-family: years;
-    src: url(fonts/Roboto_Mono/static/RobotoMono-Light.ttf);
+    src: url(fonts/Inter/static/Inter_18pt-Light.ttf);
 }
 
 * {
