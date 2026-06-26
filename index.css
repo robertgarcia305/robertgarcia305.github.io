@@ -269,6 +269,38 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     background: #084c50;
 }
 
+/* highlights */
+.highlights-wrap {
+    font-family: paragraphs;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 0px 10px 0px;
+}
+
+.highlight {
+    /* border: 1px solid#084c50; */
+    margin: 5px;
+    padding: 12px;
+    background-color: #119da5;
+    border-radius: 15px;
+    color: white;
+    width: 170px;
+}
+
+.highlight span {
+    display: block;
+    opacity: 0.9;
+}
+
+.highlight strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+
 /* projects */
 .projects-wrap {
     margin-top: 50px;
@@ -293,7 +325,7 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
 }
 
 .project-title h2 {
-    font-size: 20px;
+    font-size: 25px;
 }
 .projects-title p {
     margin-top: 12px;
