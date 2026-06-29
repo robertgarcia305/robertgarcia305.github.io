@@ -204,7 +204,7 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
 
 .hero-left img {
     width: 250px;
-    border-radius: 30px;
+    border-radius: 60px;
 }
 
 .hero-right {
