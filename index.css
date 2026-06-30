@@ -293,6 +293,10 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     border-radius: 15px;
     color: white;
     width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .highlight span {
@@ -606,6 +610,10 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
 
 .menu-block:hover {
     border: 1px solid white;
+}
+
+.date {
+    color: #084c50;
 }
 
 @media (max-width: 1440px) {
