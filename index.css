@@ -617,6 +617,30 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     color: #084c50;
 }
 
+footer {
+    background-color: #084c50;
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrap {
+    background-color: #084c50;
+    border-radius: 40px;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 @media (max-width: 1440px) {
     .hero-wrap, .projects-wrap, .cv-skills-wrap, .contact-wrap, nav {
         width: 100%;
@@ -795,10 +819,17 @@ backdrop-filter: blur(20px); /* Applies the blur effect */
     .hero-left {
         width: 60%;
     }
+
+    
 }
 
 @media (max-width: 600px) {
     .hero-wrap {
         flex-direction: column;
+    }
+
+    .footer-wrap {
+        flex-direction: column;
+        align-items: center;
     }
 }
