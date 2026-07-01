@@ -641,6 +641,15 @@ footer a {
     text-decoration: underline;
 }
 
+.footer-element a {
+    display: flex;
+    align-items: center;
+}
+
+.footer-element p {
+    margin-left: 5px;
+}
+
 @media (max-width: 1440px) {
     .hero-wrap, .projects-wrap, .cv-skills-wrap, .contact-wrap, nav {
         width: 100%;
