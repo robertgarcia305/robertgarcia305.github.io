@@ -363,3 +363,12 @@
         justify-content: center;
     }
 }
+
+.hero__image-wrap {
+    display: flex;
+    width: 250px;
+}
+
+.hero__image-wrap img {
+    width: 100%;
+}
