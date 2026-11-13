@@ -11,6 +11,15 @@ main {
     padding: 20px;
 }
 
+a {
+    text-decoration: none;
+}
+
+.site-header {
+    display: flex;
+    justify-content: center;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,15 +29,6 @@ main {
 
 .navbar__cta-wrap {
     width: 250px;
-}
-
-header {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    background-color: #ffffffab;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .site-header .is-scrolled {
