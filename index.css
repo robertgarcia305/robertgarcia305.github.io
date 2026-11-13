@@ -31,3 +31,8 @@ header {
     justify-content: center;
 }
 
+.site-header .is-scrolled {
+    width: 90%;
+    top: 10px;
+    position: sticky;
+}
