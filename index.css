@@ -1,7 +1,10 @@
-
 * {
     margin: 0px;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f7f9;
 }
 
 main {
@@ -15,4 +18,10 @@ main {
 
 .navbar__cta-wrap {
     width: 250px;
+}
+
+header {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: #ffffffab;
 }
