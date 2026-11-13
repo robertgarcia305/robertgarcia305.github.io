@@ -1,1 +1,18 @@
 
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__cta-wrap {
+    width: 250px;
+}
