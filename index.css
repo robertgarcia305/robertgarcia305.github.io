@@ -14,6 +14,8 @@ main {
 .navbar {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
 }
 
 .navbar__cta-wrap {
@@ -24,4 +26,8 @@ header {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     background-color: #ffffffab;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
