@@ -7,19 +7,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="Portfolio of Robert Garcia, a digital marketing 
-        specialist with 4+ years of experience in SEO, Shopify website management, 
+        specialist with 5+ years of experience in SEO, Shopify website management, 
         and UI/UX design. See projects and measurable results.">
         <link rel="icon" href="img/robert-garcia-favicon.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
         <style>
             * {
                 box-sizing: border-box;
             }
 
+            body {
+                margin: 0;
+                font-family: "DM Sans", sans-serif;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: "Space Grotesk", sans-serif;
+                font-weight: 600;
+                letter-spacing: -0.035em;
+            }
+
+            p {
+                font-family: "DM Sans", sans-serif;
+                font-weight: 400;
+                line-height: 1.7;
+            }
+
             .site-header {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
                 display: flex;
                 justify-content: center;
                 width: 100%;
-                padding: 10px 20px;
+                padding: 0;
+                transition: padding 220ms ease;
             }
 
             .navbar {
@@ -28,12 +52,30 @@
                 justify-content: space-between;
                 gap: 24px;
                 width: 100%;
-                max-width: 1024px;
+                max-width: none;
+                min-height: 68px;
+                padding: 10px 28px;
+                border: none;
+                border-bottom: 1px solid #bfc5c9;
+                border-radius: 0;
+                background: #fff;
+                transition: max-width 220ms ease, min-height 220ms ease,
+                    padding 220ms ease, border-radius 220ms ease,
+                    box-shadow 220ms ease;
+            }
+
+            /* Floating pill navigation after the page starts scrolling */
+            .site-header.is-scrolled {
+                padding: 10px 20px;
+            }
+
+            .site-header.is-scrolled .navbar {
+                max-width: 1440px;
                 min-height: 52px;
                 padding: 6px 6px 6px 24px;
                 border: 1px solid #bfc5c9;
                 border-radius: 999px;
-                background: #fff;
+                box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
             }
 
             .navbar a {
@@ -99,15 +141,19 @@
             }
 
             @media (max-width: 600px) {
-                .site-header {
-                    padding: 10px 12px;
+                .site-header.is-scrolled {
+                    padding: 8px 10px;
                 }
 
                 .navbar {
                     flex-wrap: wrap;
                     gap: 14px;
                     padding: 10px 12px;
-                    border-radius: 24px;
+                    border-radius: 0;
+                }
+
+                .site-header.is-scrolled .navbar {
+                    border-radius: 22px;
                 }
 
                 .navbar__logo {
@@ -141,9 +187,8 @@
                 r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                 a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        </script><script async="" src="https://static.hotjar.com/c/hotjar-5253677.js?sv=6"></script>
-<script async="" src="https://script.hotjar.com/modules.47ae0ae40a423a71e31f.js" charset="utf-8"></script><script src="https://script.hotjar.com/browser-perf.8417c6bba72228fa2e29.js"></script></head>
-
+        </script><script async="" src="https://static.hotjar.com/c/hotjar-5253677.js?sv=6"></script><script async="" src="https://static.hotjar.com/c/hotjar-5253677.js?sv=6"></script>
+<script async="" src="https://script.hotjar.com/modules.47ae0ae40a423a71e31f.js" charset="utf-8"></script><script src="https://script.hotjar.com/browser-perf.8417c6bba72228fa2e29.js"></script><script async="" src="https://script.hotjar.com/modules.47ae0ae40a423a71e31f.js" charset="utf-8"></script></head>
 <body>
 
     <header class="site-header">
@@ -435,12 +480,17 @@
         <p>© 2026 Robert Garcia. All rights reserved.</p>
     </footer>
 
+    <script>
+        const siteHeader = document.querySelector(".site-header");
+
+        function updateNavigationOnScroll() {
+            siteHeader.classList.toggle("is-scrolled", window.scrollY > 40);
+        }
+
+        window.addEventListener("scroll", updateNavigationOnScroll, { passive: true });
+        updateNavigationOnScroll();
+    </script>
 
 
-
-i duplicated many times the same thing becuase i want to test some animation on my navigation bar
-
-i want to be like this 
-
-where logo name is the Robert Garcia in bold, the 2 menu itesm are prijects, and other one is skills the call to action should be download resume i will provide the arrow and the name of it so that you can add to na nav tag as well, leave the a tag blank so that i can later add my pdf file the arrow is called arrow-up-right.png i don't want you to create any images, just add the file on the html code please<iframe id="_hjSafeContext_85059504" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body>
+<iframe id="_hjSafeContext_70366046" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body>
 </html>
