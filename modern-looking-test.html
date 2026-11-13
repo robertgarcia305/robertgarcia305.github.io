@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
         <title>Robert Garcia | Website Manager &amp; SEO Specialist</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,7 +83,9 @@
             }
 
             .navbar__logo {
-                flex: 1 1 0;
+                display: inline-flex;
+                flex: 0 0 auto;
+                width: fit-content;
                 font-size: 14px;
                 font-weight: 700;
                 white-space: nowrap;
@@ -92,7 +93,7 @@
 
             .navbar__links {
                 display: flex;
-                flex: 1 1 auto;
+                flex: 0 0 auto;
                 align-items: center;
                 justify-content: center;
                 gap: clamp(28px, 7vw, 100px);
@@ -114,7 +115,8 @@
 
             .navbar__cta {
                 display: inline-flex;
-                flex: 1 1 0;
+                flex: 0 0 auto;
+                width: fit-content;
                 align-items: center;
                 justify-content: center;
                 gap: 8px;
@@ -138,6 +140,12 @@
                 width: 14px;
                 height: 14px;
                 object-fit: contain;
+            }
+
+            .navbar__cta-wrap,
+            .navbar__logo_wrap {
+                flex: 0 0 auto;
+                width: fit-content;
             }
 
             @media (max-width: 600px) {
@@ -187,13 +195,15 @@
                 r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                 a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        </script><script async="" src="https://static.hotjar.com/c/hotjar-5253677.js?sv=6"></script><script async="" src="https://static.hotjar.com/c/hotjar-5253677.js?sv=6"></script>
-<script async="" src="https://script.hotjar.com/modules.47ae0ae40a423a71e31f.js" charset="utf-8"></script><script src="https://script.hotjar.com/browser-perf.8417c6bba72228fa2e29.js"></script><script async="" src="https://script.hotjar.com/modules.47ae0ae40a423a71e31f.js" charset="utf-8"></script></head>
+        </script><script async="" src="https://static.hotjar.com/c/hotjar-5253677.js?sv=6"></script><script async="" src="https://static.hotjar.com/c/hotjar-5253677.js?sv=6"></script><script async="" src="https://static.hotjar.com/c/hotjar-5253677.js?sv=6"></script>
+<script async="" src="https://script.hotjar.com/modules.47ae0ae40a423a71e31f.js" charset="utf-8"></script><script src="https://script.hotjar.com/browser-perf.8417c6bba72228fa2e29.js"></script><script async="" src="https://script.hotjar.com/modules.47ae0ae40a423a71e31f.js" charset="utf-8"></script><script async="" src="https://script.hotjar.com/modules.47ae0ae40a423a71e31f.js" charset="utf-8"></script><script src="https://script.hotjar.com/browser-perf.8417c6bba72228fa2e29.js"></script></head>
 <body>
 
     <header class="site-header">
         <nav class="navbar" aria-label="Main navigation">
-            <a class="navbar__logo" href="#home">Robert Garcia</a>
+            <div class="navbar__logo_wrap">
+                <a class="navbar__logo" href="#home">Robert Garcia</a>
+            </div>
 
             <ul class="navbar__links">
                 <li><a href="#projects">Projects</a></li>
@@ -201,10 +211,13 @@
             </ul>
 
             <!-- Add your resume PDF path to href when it is ready. -->
-            <a class="navbar__cta" href="">
-                <span>Download Resume</span>
-                <img src="img/arrow-up-right.png" alt="" aria-hidden="true">
-            </a>
+            <div class="navbar__cta-wrap">
+                <a class="navbar__cta" href="">
+                    <span>Download Resume</span>
+                    <img src="img/arrow-up-right.png" alt="" aria-hidden="true">
+                </a>
+            </div>
+            
         </nav>
     </header>
 
@@ -492,5 +505,5 @@
     </script>
 
 
-<iframe id="_hjSafeContext_70366046" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body>
-</html>
+<iframe id="_hjSafeContext_70366046" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+<iframe id="_hjSafeContext_9816507" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body></html>
