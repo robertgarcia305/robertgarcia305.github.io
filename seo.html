@@ -1,44 +1,424 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Robert Garcia | SEO Specialist</title>
-
-    <meta name="description" content="Robert Garcia is an SEO Specialist with experience in technical SEO, keyword research, on-page optimization, and organic growth strategies.">
-
-    <meta name="author" content="Robert Garcia">
-    <meta name="robots" content="index, follow">
-
-    <!-- Canonical URL: update when the page is published -->
-    <link rel="canonical" href="https://yourdomain.com/seo">
-
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Robert Garcia | SEO Specialist">
-    <meta property="og:description" content="Explore Robert Garcia's SEO expertise, projects, and organic growth results.">
-    <meta property="og:url" content="https://yourdomain.com/seo">
-    <meta property="og:image" content="https://yourdomain.com/img/seo-preview.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" href="img/robert-garcia-favicon.png" type="image/png">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- JavaScript -->
-    <script src="index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SEO specialist portfolio of Roberto Garcia, showcasing technical SEO, organic search growth, keyword research, local SEO, analytics, and independent SEO projects.">
+  <meta name="theme-color" content="#101827">
+  <title>Roberto Garcia | SEO Specialist & Organic Growth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --ink: #152033;
+      --muted: #64748b;
+      --line: #e3e8ef;
+      --navy: #101827;
+      --navy-2: #17243a;
+      --teal: #42d3c2;
+      --teal-dark: #087f78;
+      --soft-teal: #e8f8f6;
+      --shadow: 0 18px 50px rgba(15, 23, 42, .08);
+      --radius: 22px;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: "DM Sans", sans-serif; line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    .topbar {
+      position: fixed; z-index: 20; top: 0; left: 0; width: 100%;
+      padding: 18px 0; transition: padding .25s ease;
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 22px; padding: 0 2px; border-bottom: 1px solid rgba(255,255,255,.25);
+      transition: all .25s ease;
+    }
+    .brand { color: #fff; font: 700 17px "Space Grotesk", sans-serif; letter-spacing: -.04em; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 5px; }
+    .nav-links a {
+      color: rgba(255,255,255,.82); font-size: 12px; font-weight: 600;
+      padding: 8px 11px; border-radius: 999px; transition: .2s ease;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.12); }
+    .topbar.scrolled { padding: 10px 0; }
+    .topbar.scrolled .nav {
+      padding: 7px 12px; border: 1px solid rgba(226,232,240,.9);
+      border-radius: 999px; background: rgba(255,255,255,.92);
+      box-shadow: 0 8px 28px rgba(15,23,42,.09); backdrop-filter: blur(16px);
+    }
+    .topbar.scrolled .brand { color: var(--ink); }
+    .topbar.scrolled .nav-links a { color: #475569; }
+    .topbar.scrolled .nav-links a:hover { color: var(--ink); background: #edf2f7; }
+    .hero {
+      position: relative; overflow: hidden; color: #fff;
+      background: radial-gradient(circle at 82% 22%, rgba(66,211,194,.22), transparent 28%),
+                  radial-gradient(circle at 8% 85%, rgba(67,108,176,.22), transparent 32%),
+                  linear-gradient(130deg, #101827 0%, #17243a 58%, #102d3a 100%);
+      padding: 154px 0 82px;
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 430px; height: 430px; right: -160px; bottom: -260px;
+      border: 1px solid rgba(255,255,255,.12); border-radius: 50%;
+      box-shadow: 0 0 0 42px rgba(255,255,255,.025), 0 0 0 84px rgba(255,255,255,.02);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 55px; align-items: center; position: relative; z-index: 1; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #9ce9df; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 23px; height: 1px; background: var(--teal); }
+    h1,h2,h3 { font-family: "Space Grotesk", sans-serif; letter-spacing: -.04em; }
+    h1 { max-width: 720px; margin: 17px 0 17px; font-size: clamp(42px, 6.3vw, 72px); line-height: 1.02; }
+    h1 span { color: var(--teal); }
+    .hero-copy { max-width: 650px; margin: 0; color: #c5d0df; font-size: 16px; line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 29px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 999px; font-size: 12px; font-weight: 700; transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: #082b2a; background: var(--teal); box-shadow: 0 8px 24px rgba(66,211,194,.2); }
+    .btn-outline { color: #fff; border: 1px solid rgba(255,255,255,.3); }
+    .hero-panel {
+      padding: 24px; border: 1px solid rgba(255,255,255,.14); border-radius: 24px;
+      background: rgba(255,255,255,.07); backdrop-filter: blur(12px);
+    }
+    .panel-label { color: #9ce9df; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .panel-title { margin: 10px 0 18px; font: 600 21px "Space Grotesk", sans-serif; }
+    .focus-list { display: grid; gap: 12px; }
+    .focus-item { display: flex; align-items: center; gap: 10px; color: #d7e0eb; font-size: 12px; }
+    .check { display: grid; place-items: center; width: 22px; height: 22px; flex: 0 0 22px; border-radius: 50%; color: #072b2a; background: var(--teal); font-size: 12px; font-weight: 700; }
+    .metrics { position: relative; z-index: 2; margin-top: -30px; }
+    .metric-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--line); box-shadow: var(--shadow); }
+    .metric { padding: 22px 24px; background: var(--surface); }
+    .metric strong { display: block; color: var(--ink); font: 700 clamp(22px,3vw,30px) "Space Grotesk", sans-serif; letter-spacing: -.05em; }
+    .metric span { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+    section { padding: 84px 0 0; }
+    .section-kicker { color: var(--teal-dark); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 28px; }
+    h2 { margin: 7px 0 0; font-size: clamp(29px,4vw,42px); line-height: 1.12; }
+    .section-intro { max-width: 440px; margin: 0; color: var(--muted); font-size: 13px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 30px rgba(15,23,42,.035); }
+    .about-card { padding: 28px; }
+    .about-card p { margin: 0; color: #526176; font-size: 13px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .pill { padding: 7px 11px; border: 1px solid #dce9e8; border-radius: 999px; color: #276a66; background: var(--soft-teal); font-size: 10px; font-weight: 700; }
+    .experience-list { display: grid; gap: 15px; }
+    .experience-card { padding: 25px 28px; }
+    .experience-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+    .experience-card h3 { margin: 0; font-size: 19px; }
+    .company { margin-top: 3px; color: var(--teal-dark); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .date { flex: 0 0 auto; color: var(--muted); font-size: 11px; }
+    .experience-card p { margin: 13px 0 0; color: #58677b; font-size: 12.5px; }
+    .experience-card ul { margin: 12px 0 0; padding-left: 18px; color: #58677b; font-size: 12px; }
+    .experience-card li { margin: 5px 0; padding-left: 3px; }
+    .result-line { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 15px; }
+    .result { padding: 8px 11px; border-radius: 10px; background: #f0f7f7; color: #176b66; font-size: 10px; font-weight: 700; }
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .project-card { display: flex; flex-direction: column; padding: 27px; min-height: 100%; }
+    .project-type { color: var(--teal-dark); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .project-card h3 { margin: 9px 0 8px; font-size: 22px; }
+    .project-card p { margin: 0; color: #5c6b7f; font-size: 12.5px; }
+    .project-card ul { margin: 14px 0 20px; padding-left: 17px; color: #5c6b7f; font-size: 11.5px; }
+    .project-card li { margin: 5px 0; }
+    .project-link { margin-top: auto; color: var(--teal-dark); font-size: 11px; font-weight: 700; }
+    .skills-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+    .skill-card { padding: 22px 24px; }
+    .skill-card h3 { margin: 0 0 8px; font-size: 15px; }
+    .skill-card p { margin: 0; color: #5c6b7f; font-size: 12px; }
+    .education-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
+    .education-card { padding: 24px; }
+    .education-card h3 { margin: 0 0 6px; font-size: 16px; }
+    .education-card p { margin: 0; color: #64748b; font-size: 12px; }
+    .contact { padding: 84px 0 70px; }
+    .contact-box {
+      display: flex; align-items: center; justify-content: space-between; gap: 25px;
+      padding: 36px; color: #fff; border-radius: 26px;
+      background: radial-gradient(circle at 90% 0%, rgba(66,211,194,.2), transparent 32%), var(--navy);
+    }
+    .contact-box h2 { margin: 0 0 8px; font-size: 31px; }
+    .contact-box p { margin: 0; color: #bdc9d8; font-size: 12px; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .contact-links a { padding: 10px 14px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; color: #fff; font-size: 11px; font-weight: 700; }
+    footer { padding: 20px 0 28px; color: #8793a4; font-size: 10px; text-align: center; }
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero-panel { max-width: 520px; }
+      .metric-grid { grid-template-columns: repeat(2,1fr); }
+      .section-heading { display: block; }
+      .section-intro { margin-top: 12px; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(var(--max), calc(100% - 30px)); }
+      .topbar { padding: 12px 0; }
+      .nav { align-items: flex-start; flex-direction: column; gap: 8px; border: 0; }
+      .nav-links { width: 100%; overflow-x: auto; padding-bottom: 3px; }
+      .nav-links a { padding: 6px 9px; white-space: nowrap; font-size: 10px; }
+      .topbar.scrolled .nav { border-radius: 18px; }
+      .hero { padding: 155px 0 65px; }
+      .hero-copy { font-size: 14px; }
+      .metric { padding: 17px; }
+      section { padding-top: 65px; }
+      .about-grid,.projects-grid,.skills-grid,.education-grid { grid-template-columns: 1fr; }
+      .experience-card { padding: 21px; }
+      .experience-top { display: block; }
+      .date { display: block; margin-top: 5px; }
+      .contact-box { display: block; padding: 27px; }
+      .contact-links { margin-top: 20px; }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="topbar" id="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home">ROBERT GARCIA</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero" id="home" style="padding-top:0">
+      <div class="container hero-grid" style="padding-top:154px">
+        <div>
+          <div class="eyebrow">SEO Specialist · Organic Growth</div>
+          <h1>Turning search visibility into <span>measurable growth.</span></h1>
+          <p class="hero-copy">
+            I'm Roberto Garcia, an SEO and digital marketing professional with 5+ years of experience
+            improving organic search visibility, technical performance, and user experience across
+            e-commerce, local businesses, and independent digital projects.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience">Explore my experience</a>
+            <a class="btn btn-outline" href="mailto:robertserranogar@gmail.com">Get in touch</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="panel-label">Areas of focus</div>
+          <div class="panel-title">SEO from strategy to implementation.</div>
+          <div class="focus-list">
+            <div class="focus-item"><span class="check">✓</span> Technical SEO & site health</div>
+            <div class="focus-item"><span class="check">✓</span> Keyword research & on-page SEO</div>
+            <div class="focus-item"><span class="check">✓</span> Organic performance analytics</div>
+            <div class="focus-item"><span class="check">✓</span> Local SEO & Google Business Profile</div>
+            <div class="focus-item"><span class="check">✓</span> Website structure & UX</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="container metrics" aria-label="Selected SEO performance metrics">
+      <div class="metric-grid">
+        <div class="metric"><strong>284K+</strong><span>Starr organic sessions · 2025</span></div>
+        <div class="metric"><strong>$215K+</strong><span>Starr organic search revenue · 2025</span></div>
+        <div class="metric"><strong>90%</strong><span>Starr Semrush Site Health</span></div>
+        <div class="metric"><strong>92%</strong><span>Tempco Semrush Site Health</span></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-kicker">Profile</div><h2>SEO with a hands-on<br>technical foundation.</h2></div>
+          <p class="section-intro">I combine search strategy with practical website implementation—from researching keywords and optimizing content to improving site architecture, diagnosing technical issues, and analyzing performance.</p>
+        </div>
+        <div class="about-grid">
+          <div class="card about-card">
+            <p>My experience spans large Shopify product catalogs, a separate e-commerce storefront, local retail SEO, and independent web projects. I work across the technical and content sides of SEO, using search and analytics platforms to identify opportunities and guide improvements.</p>
+            <div class="pill-row">
+              <span class="pill">Technical SEO</span><span class="pill">On-Page SEO</span><span class="pill">Keyword Research</span><span class="pill">Local SEO</span><span class="pill">Analytics</span>
+            </div>
+          </div>
+          <div class="card about-card">
+            <p>Alongside ongoing website work, I create practical tools and independent projects that deepen my understanding of SEO diagnostics, content performance, website structure, and technical implementation.</p>
+            <div class="pill-row">
+              <span class="pill">Google Search Console</span><span class="pill">GA4</span><span class="pill">Semrush</span><span class="pill">Shopify</span><span class="pill">HTML & CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-kicker">Professional experience</div><h2>Search performance<br>across real businesses.</h2></div>
+          <p class="section-intro">Selected responsibilities and outcomes from e-commerce and local business websites.</p>
+        </div>
+        <div class="experience-list">
+          <article class="card experience-card">
+            <div class="experience-top">
+              <div><h3>SEO & Website Manager</h3><div class="company">Starr Western Wear</div></div>
+              <div class="date">July 2021 – Present</div>
+            </div>
+            <p>Manage organic search optimization for a 10,000+ SKU Shopify storefront, combining technical SEO, on-page optimization, site architecture, and performance analysis.</p>
+            <ul>
+              <li>Optimize product and category pages through keyword research, titles, meta descriptions, image alt text, internal linking, and content improvements.</li>
+              <li>Address crawl errors, broken links, redirects, canonical tags, robots.txt, XML sitemaps, structured data, and indexing issues.</li>
+              <li>Improve site architecture, navigation, page speed, and Core Web Vitals; monitor search performance and website health.</li>
+              <li>Manage Google Business Profile and local SEO activities, support backlink/vendor outreach, and coordinate website tasks with teams of up to three.</li>
+              <li>Implemented cookie consent and privacy-focused tracking configurations across GA4, Shopify, Meta, and Klaviyo.</li>
+            </ul>
+            <div class="result-line">
+              <span class="result">284,375 organic sessions · 2025</span>
+              <span class="result">$215,799.50 organic revenue · 2025</span>
+              <span class="result">90% Semrush Site Health</span>
+            </div>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <div><h3>SEO & Website Manager</h3><div class="company">Tempco Clothing</div></div>
+              <div class="date">July 2021 – Present</div>
+            </div>
+            <p>Manage SEO for a separate Shopify storefront, independently tracking and optimizing its organic search performance.</p>
+            <ul>
+              <li>Conduct keyword research and optimize product pages, collections, metadata, content, and internal linking.</li>
+              <li>Led a complete Shopify redesign using Liquid, HTML, CSS, and AI-assisted development workflows.</li>
+              <li>Implement technical SEO and website performance improvements, monitoring organic traffic and search visibility through GA4, Google Search Console, and Semrush.</li>
+            </ul>
+            <div class="result-line">
+              <span class="result">15,942 organic sessions · 2025</span>
+              <span class="result">$17,214.71 organic revenue · 2025</span>
+              <span class="result">92% Semrush Site Health</span>
+            </div>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <div><h3>Website Manager</h3><div class="company">The Shoppes at Solana</div></div>
+              <div class="date">July 2023 – January 2026</div>
+            </div>
+            <p>Led the creation and initial development of a shopping mall website following its acquisition and rebranding.</p>
+            <ul>
+              <li>Built the Shopify website using Liquid, HTML, and CSS, establishing site architecture, navigation, custom layouts, and a centralized tenant directory across Dining, Shopping, and Play & Services.</li>
+              <li>Provided recommendations to management regarding SEO, accessibility, and UX to improve search visibility, content organization, and user navigation.</li>
+            </ul>
+          </article>
+
+          <article class="card experience-card">
+            <div class="experience-top">
+              <div><h3>Website Manager | Local SEO</h3><div class="company">Union Fashion</div></div>
+              <div class="date">December 2024 – Present</div>
+            </div>
+            <p>Support local search visibility for a physical retail business focused on bringing nearby customers into the store.</p>
+            <ul>
+              <li>Designed and developed a custom Shopify website using Liquid, HTML, CSS, and AI-assisted development workflows.</li>
+              <li>Conduct local keyword research, develop geo-targeted content, and manage Google Business Profile information, photos, posts, and updates.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-kicker">Independent projects</div><h2>Building beyond<br>the day-to-day.</h2></div>
+          <p class="section-intro">Independent projects where I apply SEO strategy, website development, and practical problem-solving.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="card project-card">
+            <div class="project-type">Founder · SEO & Website Development</div>
+            <h3>Cash Tools</h3>
+            <p>An independently developed financial tools website, where I manage keyword research, SEO strategy, content, website architecture, and new tool development.</p>
+            <ul>
+              <li>Develop financial calculators, features, and supporting blog content.</li>
+              <li>Implement technical SEO, structured data, internal linking, and performance improvements.</li>
+              <li>Track organic search clicks, impressions, CTR, and rankings in Google Search Console.</li>
+            </ul>
+            <div class="result-line">
+              <span class="result">387 organic clicks*</span>
+              <span class="result">21,100 impressions*</span>
+              <span class="result">1.80% average CTR*</span>
+            </div>
+            <p style="font-size:10px;margin:12px 0 17px;color:#8793a4">*Lifetime Google Search Console data through November 2026.</p>
+            <a class="project-link" href="https://www.cashtools.org/" target="_blank" rel="noopener noreferrer">Visit Cash Tools ↗</a>
+          </article>
+          <article class="card project-card">
+            <div class="project-type">Creator · Technical SEO Tool</div>
+            <h3>SEO Page Inspector</h3>
+            <p>A browser-based page-level SEO inspection tool designed to surface useful diagnostics from HTML source and page content.</p>
+            <ul>
+              <li>Inspect heading structure, metadata, internal and external links, image alt attributes, and structured data.</li>
+              <li>Designed the architecture, features, workflows, and user experience.</li>
+              <li>Directed AI-assisted HTML, CSS, and JavaScript implementation; tested and debugged the tool.</li>
+              <li>Added CSV and JSON exports for SEO documentation and analysis.</li>
+            </ul>
+            <a class="project-link" href="https://robertgarcia305.github.io/seo-tools/seo-page-inspector.html" target="_blank" rel="noopener noreferrer">Explore SEO Page Inspector ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-kicker">Capabilities</div><h2>Tools & technical skills.</h2></div>
+          <p class="section-intro">A combination of SEO platforms, analytics, web technologies, and UX tools used to plan, implement, and evaluate website improvements.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="card skill-card"><h3>SEO & Organic Growth</h3><p>Technical SEO, On-Page SEO, Keyword Research, Search Intent, Content Strategy, Site Architecture, Internal Linking, Structured Data, Schema Markup, Local SEO, Google Business Profile, Backlink Outreach.</p></div>
+          <div class="card skill-card"><h3>Analytics & SEO Platforms</h3><p>Google Search Console, Google Analytics 4 (GA4), Semrush, Hotjar, PageSpeed Insights.</p></div>
+          <div class="card skill-card"><h3>Web Development & Technical</h3><p>Shopify, Shopify Liquid, WordPress, HTML, CSS, JavaScript (basic working knowledge), SQL (basic knowledge), XML Sitemaps, Robots.txt, Canonical Tags, Redirects, Website Accessibility.</p></div>
+          <div class="card skill-card"><h3>UX, Design & Tools</h3><p>UX Research, UI/UX Design, Conversion Rate Optimization, Behavioral Analysis, Figma, Adobe Photoshop, Image Optimization, Excel, Google Workspace, AI-Assisted Development.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-kicker">Background</div><h2>Education & languages.</h2></div>
+        </div>
+        <div class="education-grid">
+          <div class="card education-card">
+            <h3>Universidad Autónoma de Nuevo León (UANL)</h3>
+            <p>Bachelor's Degree in Marketing (Licenciatura en Mercadotecnia)<br>July 2015 – December 2019</p>
+            <p style="margin-top:12px">Professional Development: Digital Skills: User Experience — Accenture, FutureLearn</p>
+          </div>
+          <div class="card education-card">
+            <h3>Languages</h3>
+            <p>Spanish — Native<br>English — Fluent</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <h2>Let's talk about organic growth.</h2>
+            <p>Interested in SEO, technical optimization, or improving search performance? Get in touch.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:robertserranogar@gmail.com">Email me</a>
+            <a href="tel:9159960387">915-996-0387</a>
+            <a href="https://robertgarcia305.github.io/website-management.html">Website Management</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">© <span id="year">2026</span> Roberto Garcia · SEO Specialist & Organic Growth</div></footer>
+  <script>
+    const topbar = document.getElementById('topbar');
+    const updateNav = () => topbar.classList.toggle('scrolled', window.scrollY > 24);
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
