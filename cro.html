@@ -1,334 +1,224 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Roberto Garcia — CRO and digital experience professional specializing in UX research, behavioral analysis, Shopify optimization, and e-commerce experiences.">
-  <meta name="theme-color" content="#0b1220">
-  <title>Roberto Garcia | CRO & Digital Experience</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --ink: #111827;
-      --muted: #64748b;
-      --line: #e2e8f0;
-      --navy: #0b1220;
-      --navy-2: #111d31;
-      --teal: #35c6b0;
-      --teal-dark: #087f78;
-      --soft-teal: #e6f8f5;
-      --radius: 22px;
-      --shadow: 0 18px 50px rgba(15, 23, 42, .08);
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "DM Sans", sans-serif; line-height: 1.65; }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, calc(100% - 44px)); margin: 0 auto; }
-    .site-nav { position: fixed; z-index: 20; top: 0; left: 0; width: 100%; padding: 20px 0; transition: padding .25s ease; }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { color: #fff; font: 700 18px "Space Grotesk", sans-serif; letter-spacing: -.04em; }
-    .nav-links { display: flex; align-items: center; gap: 5px; }
-    .nav-links a { color: rgba(255,255,255,.78); font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 999px; transition: .2s; }
-    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.1); }
-    .site-nav.scrolled { padding: 10px 0; }
-    .site-nav.scrolled .nav-inner { background: rgba(255,255,255,.94); backdrop-filter: blur(16px); border: 1px solid rgba(226,232,240,.9); border-radius: 999px; padding: 8px 12px 8px 20px; box-shadow: 0 10px 30px rgba(15,23,42,.09); }
-    .site-nav.scrolled .brand { color: var(--navy); }
-    .site-nav.scrolled .nav-links a { color: #475569; }
-    .site-nav.scrolled .nav-links a:hover { color: var(--teal-dark); background: var(--soft-teal); }
-    .hero { position: relative; overflow: hidden; color: #fff; background: radial-gradient(circle at 82% 25%, rgba(53,198,176,.22), transparent 28%), radial-gradient(circle at 12% 85%, rgba(52,104,173,.25), transparent 30%), linear-gradient(135deg, #09111f, #14243a 70%, #102b3b); padding: 160px 0 92px; }
-    .hero:after { content: ""; position: absolute; width: 520px; height: 520px; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; right: -180px; bottom: -340px; box-shadow: 0 0 0 55px rgba(255,255,255,.025), 0 0 0 110px rgba(255,255,255,.02); }
-    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 54px; align-items: center; position: relative; z-index: 1; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #8ce5d8; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; }
-    .eyebrow:before { content: ""; width: 25px; height: 2px; background: var(--teal); }
-    h1,h2,h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.12; letter-spacing: -.045em; }
-    h1 { font-size: clamp(42px, 6vw, 68px); margin: 20px 0; max-width: 760px; }
-    .hero h1 span { color: var(--teal); }
-    .hero-copy { max-width: 650px; color: #cbd5e1; font-size: 17px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 12px 20px; font-size: 13px; font-weight: 700; transition: transform .2s, background .2s; }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--teal); color: #06211f; }
-    .btn-outline { color: #fff; border: 1px solid rgba(255,255,255,.25); }
-    .hero-panel { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 26px; padding: 27px; backdrop-filter: blur(10px); box-shadow: 0 25px 60px rgba(0,0,0,.16); }
-    .panel-label { color: #9fb0c4; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; }
-    .panel-title { font: 600 21px "Space Grotesk", sans-serif; margin: 10px 0 22px; }
-    .signal { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.12); color: #d8e1eb; font-size: 13px; }
-    .signal strong { color: #8ce5d8; font: 600 14px "Space Grotesk", sans-serif; }
-    .metrics { position: relative; z-index: 2; margin-top: -1px; background: #fff; border-bottom: 1px solid var(--line); }
-    .metric-grid { display: grid; grid-template-columns: repeat(4,1fr); }
-    .metric { padding: 27px 22px; border-right: 1px solid var(--line); }
-    .metric:first-child { padding-left: 0; }
-    .metric:last-child { border-right: 0; }
-    .metric strong { display: block; color: var(--navy); font: 700 27px "Space Grotesk", sans-serif; letter-spacing: -.04em; }
-    .metric span { color: var(--muted); font-size: 12px; }
-    section.content { padding: 88px 0; }
-    .section-head { max-width: 690px; margin-bottom: 34px; }
-    .kicker { color: var(--teal-dark); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-    h2 { font-size: clamp(31px, 4vw, 43px); margin: 10px 0 13px; }
-    .section-intro { color: var(--muted); margin: 0; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 27px; box-shadow: 0 8px 25px rgba(15,23,42,.035); }
-    .card h3 { font-size: 21px; margin: 0 0 12px; }
-    .card p { color: var(--muted); margin: 0; font-size: 14px; }
-    .card-icon { width: 42px; height: 42px; display: grid; place-items: center; background: var(--soft-teal); color: var(--teal-dark); border-radius: 13px; font-size: 18px; margin-bottom: 18px; }
-    .experience-list { display: grid; gap: 18px; }
-    .experience { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
-    .experience-top { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; margin-bottom: 16px; }
-    .experience h3 { font-size: 21px; margin: 0 0 5px; }
-    .company { color: var(--teal-dark); font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
-    .date { white-space: nowrap; color: var(--muted); font-size: 12px; }
-    ul { margin: 0; padding-left: 19px; color: #475569; font-size: 14px; }
-    li { padding-left: 3px; margin: 7px 0; }
-    .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .project { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 29px; min-height: 260px; position: relative; overflow: hidden; }
-    .project:after { content: ""; position: absolute; width: 190px; height: 190px; border: 1px solid rgba(53,198,176,.25); border-radius: 50%; right: -65px; bottom: -105px; box-shadow: 0 0 0 25px rgba(53,198,176,.04), 0 0 0 50px rgba(53,198,176,.03); }
-    .project .tag { color: #8ce5d8; font-size: 11px; text-transform: uppercase; letter-spacing: .13em; font-weight: 700; }
-    .project h3 { font-size: 25px; margin: 14px 0 9px; }
-    .project p { color: #c2cfdd; font-size: 14px; max-width: 430px; }
-    .project a { display: inline-block; margin-top: 12px; color: #8ce5d8; font-size: 13px; font-weight: 700; position: relative; z-index: 1; }
-    .skill-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
-    .skill-group { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
-    .skill-group h3 { font-size: 16px; margin: 0 0 12px; letter-spacing: -.02em; }
-    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
-    .pill { background: #f1f5f9; color: #475569; border-radius: 999px; padding: 6px 10px; font-size: 11px; font-weight: 600; }
-    .education { display: grid; grid-template-columns: 1.3fr .7fr; gap: 20px; }
-    .edu-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
-    .edu-card h3 { font-size: 18px; margin: 0 0 8px; }
-    .edu-card p { margin: 0; color: var(--muted); font-size: 13px; }
-    .contact { background: linear-gradient(135deg, #0b1220, #142b3d); color: #fff; border-radius: 28px; padding: 48px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-    .contact h2 { margin-top: 0; max-width: 600px; }
-    .contact p { color: #bdcad8; margin-bottom: 0; }
-    footer { padding: 28px 0; color: var(--muted); font-size: 12px; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
-    @media (max-width: 800px) {
-      .hero-grid, .two-col, .project-grid, .education { grid-template-columns: 1fr; }
-      .hero { padding: 140px 0 70px; }
-      .hero-panel { max-width: 520px; }
-      .metric-grid { grid-template-columns: repeat(2,1fr); }
-      .metric:nth-child(2) { border-right: 0; }
-      .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      section.content { padding: 65px 0; }
-    }
-    @media (max-width: 580px) {
-      .container { width: min(100% - 30px, 1120px); }
-      .nav-inner { align-items: flex-start; flex-direction: column; gap: 7px; }
-      .site-nav { padding: 12px 0; }
-      .nav-links { max-width: 100%; overflow-x: auto; width: 100%; }
-      .nav-links a { white-space: nowrap; padding: 7px 9px; font-size: 11px; }
-      .site-nav.scrolled .nav-inner { border-radius: 18px; padding: 9px 12px; }
-      h1 { font-size: 42px; }
-      .hero-copy { font-size: 15px; }
-      .metric { padding: 20px 12px; }
-      .metric strong { font-size: 23px; }
-      .experience { padding: 21px; }
-      .experience-top { flex-direction: column; gap: 5px; }
-      .contact { padding: 30px 24px; align-items: flex-start; flex-direction: column; }
-      .footer-inner { flex-direction: column; }
-    }
-  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Robert Garcia — CRO Specialist focused on conversion optimization, UX research, behavioral analysis, e-commerce performance, and digital experience." name="description"/>
+<meta content="#101827" name="theme-color"/>
+<title>Robert Garcia | CRO Specialist &amp; Digital Experience</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <nav class="site-nav" id="siteNav">
-    <div class="container nav-inner">
-      <a class="brand" href="#home">RG<span style="color:#35c6b0">.</span></a>
-      <div class="nav-links">
-        <a href="#approach">Approach</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">CRO · UX · E-commerce</div>
-        <h1>Better digital experiences. <span>Stronger outcomes.</span></h1>
-        <p class="hero-copy">I'm Roberto Garcia, a CRO and digital experience professional focused on improving how people discover products, navigate websites, and move through e-commerce experiences.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#experience">Explore my experience</a>
-          <a class="btn btn-outline" href="mailto:robertserranogar@gmail.com">Get in touch</a>
-        </div>
-      </div>
-      <aside class="hero-panel">
-        <div class="panel-label">Optimization focus</div>
-        <div class="panel-title">A practical, data-informed approach to website improvement.</div>
-        <div class="signal"><span>Behavior & journey analysis</span><strong>GA4 · Hotjar</strong></div>
-        <div class="signal"><span>Storefront experience</span><strong>Shopify · UX</strong></div>
-        <div class="signal"><span>Page & product discovery</span><strong>Structure · Merchandising</strong></div>
-        <div class="signal"><span>Performance & usability</span><strong>Speed · Accessibility</strong></div>
-      </aside>
-    </div>
-  </header>
-
-  <div class="metrics">
-    <div class="container metric-grid">
-      <div class="metric"><strong>$1.41M</strong><span>Starr 2025 online revenue</span></div>
-      <div class="metric"><strong>909K+</strong><span>Starr 2025 website sessions</span></div>
-      <div class="metric"><strong>1.03%</strong><span>Starr 2025 conversion rate</span></div>
-      <div class="metric"><strong>$121.05</strong><span>Starr 2025 average order value</span></div>
-    </div>
-  </div>
-
-  <main>
-    <section class="content" id="approach">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Optimization approach</div>
-          <h2>Understand the experience before improving it.</h2>
-          <p class="section-intro">My work combines behavioral insights, e-commerce operations, and hands-on website development. I focus on identifying friction and making practical improvements across the customer journey.</p>
-        </div>
-        <div class="two-col">
-          <article class="card">
-            <div class="card-icon">⌕</div>
-            <h3>Behavioral analysis</h3>
-            <p>Use GA4 and Hotjar to review website performance and user behavior, identify potential friction points, and inform improvements to pages, navigation, and the shopping journey.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">◇</div>
-            <h3>Product & content experience</h3>
-            <p>Improve product detail pages, content organization, imagery, metadata, collections, filters, and merchandising to make products easier to discover and evaluate.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">↗</div>
-            <h3>Navigation & journey design</h3>
-            <p>Refine site architecture, navigation, internal linking, and page layouts to support intuitive browsing and clearer paths through the storefront.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon">⌘</div>
-            <h3>Implementation & performance</h3>
-            <p>Build and customize Shopify sections and themes, address website performance issues, and make responsive, accessibility-minded improvements.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="content" id="experience" style="background:#eef2f7">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Professional experience</div>
-          <h2>Hands-on experience across retail and local businesses.</h2>
-          <p class="section-intro">Website management, user experience, merchandising, analytics, and front-end implementation are closely connected throughout my work.</p>
-        </div>
-        <div class="experience-list">
-          <article class="experience">
-            <div class="experience-top"><div><h3>Website Manager | CRO & UX Optimization</h3><div class="company">Starr Western Wear</div></div><div class="date">July 2021 – Present</div></div>
-            <ul>
-              <li>Manage and optimize a 10,000+ SKU Shopify storefront generating $1.41M in online revenue across 909K+ website sessions in 2025.</li>
-              <li>Use GA4 and Hotjar to review performance and user behavior, identify friction points, and inform improvements to product pages, navigation, and the shopping journey.</li>
-              <li>Optimize product detail pages, site architecture, navigation, collections, filters, and merchandising to support product discovery and usability.</li>
-              <li>Monitor e-commerce performance; the storefront recorded a 1.03% conversion rate and $121.05 average order value in 2025.</li>
-              <li>Develop and customize Shopify themes and modular sections using Liquid, HTML, and CSS; improve speed and Core Web Vitals.</li>
-              <li>Implement cookie consent and privacy-focused tracking configurations across GA4, Shopify, Meta, and Klaviyo.</li>
-            </ul>
-          </article>
-          <article class="experience">
-            <div class="experience-top"><div><h3>Website Manager | CRO & UX Optimization</h3><div class="company">Tempco Clothing</div></div><div class="date">July 2021 – Present</div></div>
-            <ul>
-              <li>Led a complete Shopify redesign using Liquid, HTML, CSS, and AI-assisted development workflows, creating custom sections and layouts.</li>
-              <li>Optimized product pages, collections, metadata, merchandising, and site navigation to improve product discovery and the overall shopping experience.</li>
-              <li>Reviewed website performance and user behavior through GA4 and Google Search Console to identify opportunities for usability, content, and performance improvements.</li>
-              <li>The storefront recorded $35.7K in annual online revenue, a 1.13% conversion rate, and an $84.30 average order value in 2025.</li>
-            </ul>
-          </article>
-          <article class="experience">
-            <div class="experience-top"><div><h3>Website Manager | Web Designer</h3><div class="company">The Shoppes at Solana</div></div><div class="date">July 2023 – January 2026</div></div>
-            <ul>
-              <li>Built and launched a custom Shopify website following a shopping mall acquisition and rebrand, establishing site architecture, navigation, custom layouts, and a centralized tenant directory.</li>
-              <li>Organized visitor-facing content across Dining, Shopping, and Play & Services, and provided management with recommendations to improve usability, accessibility, and content organization.</li>
-            </ul>
-          </article>
-          <article class="experience">
-            <div class="experience-top"><div><h3>Website Manager | Local SEO & Digital Experience</h3><div class="company">Union Fashion</div></div><div class="date">December 2024 – Present</div></div>
-            <ul>
-              <li>Designed and developed a custom Shopify website for a local retail business using Liquid, HTML, CSS, and AI-assisted development workflows.</li>
-              <li>Built geo-targeted content based on local keyword research and optimized Google Business Profile information, photos, posts, and updates to strengthen local discovery and encourage in-store visits.</li>
-            </ul>
-          </article>
-          <article class="experience">
-            <div class="experience-top"><div><h3>Founder | E-commerce & Brand Manager</h3><div class="company">Belica Clothing</div></div><div class="date">July 2019 – October 2020</div></div>
-            <ul>
-              <li>Founded and managed a Shopify apparel brand, overseeing website operations, product listings, merchandising, and online sales.</li>
-              <li>Designed 20+ apparel graphics and product concepts, managed sourcing and supplier negotiations, created product photography, and ran Meta advertising campaigns.</li>
-              <li>Oversaw inventory, order fulfillment, customer service, and returns.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="content" id="projects">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Independent projects</div>
-          <h2>Building and improving digital products.</h2>
-          <p class="section-intro">Independent projects give me opportunities to apply website development, usability, content, and performance principles beyond my primary roles.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project">
-            <div class="tag">Website · Financial tools</div>
-            <h3>Cash Tools</h3>
-            <p>An independently developed financial tools website. I work on its structure, content, interactive calculators, mobile experience, usability, and performance.</p>
-            <a href="https://www.cashtools.org/" target="_blank" rel="noopener">Visit Cash Tools ↗</a>
-          </article>
-          <article class="project">
-            <div class="tag">Independent build · November 2026</div>
-            <h3>SEO Page Inspector</h3>
-            <p>A browser-based inspection tool I conceptualized and built, defining its architecture and workflows and directing AI-assisted implementation with hands-on testing and debugging.</p>
-            <a href="https://robertgarcia305.github.io/seo-tools/seo-page-inspector.html" target="_blank" rel="noopener">Explore the tool ↗</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="content" id="skills" style="background:#eef2f7">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Technical skills</div>
-          <h2>Tools and capabilities.</h2>
-        </div>
-        <div class="skill-grid">
-          <div class="skill-group"><h3>CRO & Digital Experience</h3><div class="pills"><span class="pill">Conversion Rate Optimization</span><span class="pill">UX Research</span><span class="pill">Behavioral Analysis</span><span class="pill">Customer Journey Optimization</span><span class="pill">Product Page Optimization</span><span class="pill">Navigation & IA</span><span class="pill">Merchandising</span><span class="pill">Usability Improvements</span></div></div>
-          <div class="skill-group"><h3>Analytics & Research</h3><div class="pills"><span class="pill">GA4</span><span class="pill">Hotjar</span><span class="pill">Google Search Console</span><span class="pill">Semrush</span><span class="pill">PageSpeed Insights</span><span class="pill">E-commerce Analysis</span></div></div>
-          <div class="skill-group"><h3>Web Development & Platforms</h3><div class="pills"><span class="pill">Shopify</span><span class="pill">Shopify Liquid</span><span class="pill">WordPress</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript · Basic</span><span class="pill">SQL · Basic</span><span class="pill">Responsive Design</span><span class="pill">Accessibility</span></div></div>
-          <div class="skill-group"><h3>Design & Tools</h3><div class="pills"><span class="pill">Figma</span><span class="pill">Adobe Photoshop</span><span class="pill">Image Optimization</span><span class="pill">Meta Ads</span><span class="pill">Google Workspace</span><span class="pill">Excel</span><span class="pill">AI-Assisted Development</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content">
-      <div class="container">
-        <div class="education">
-          <div class="edu-card"><div class="kicker">Education</div><h3>Universidad Autónoma de Nuevo León (UANL)</h3><p>Bachelor's Degree in Marketing (Licenciatura en Mercadotecnia)<br>July 2015 – December 2019</p></div>
-          <div class="edu-card"><div class="kicker">Professional development</div><h3>Digital Skills: User Experience</h3><p>Accenture · FutureLearn</p><br><div class="kicker">Languages</div><p>Spanish — Native · English — Fluent</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content" id="contact" style="padding-top:10px">
-      <div class="container">
-        <div class="contact">
-          <div><div class="kicker" style="color:#8ce5d8">Let's connect</div><h2>Interested in improving a digital experience?</h2><p>I'm open to opportunities in CRO, UX optimization, and e-commerce experience.</p></div>
-          <div class="hero-actions"><a class="btn btn-primary" href="mailto:robertserranogar@gmail.com">Email me</a><a class="btn btn-outline" href="tel:9159960387">915-996-0387</a></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="container footer-inner"><span>© <span id="year"></span> Roberto Garcia</span><span>CRO · Conversion Optimization · Digital Experience</span></div></footer>
-  <script>
-    const nav = document.getElementById('siteNav');
-    const year = document.getElementById('year');
-    year.textContent = new Date().getFullYear();
-    const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > 24);
-    window.addEventListener('scroll', updateNav, { passive: true });
-    updateNav();
+<header class="topbar" id="topbar">
+<div class="wrap topbar-inner">
+<a class="brand" href="#home">ROBERT GARCIA</a>
+<nav aria-label="Main navigation">
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+<a class="nav-download" download="" href="Roberto_Garcia_CRO_Digital_Experience_Resume.pdf">Download Resume <span aria-hidden="true">↓</span></a>
+</nav>
+</div>
+</header>
+<a class="floating-email" href="mailto:robertserranogar@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+<main>
+<section class="hero" id="home">
+<div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div><div class="hero-orb orb-three"></div>
+<div class="wrap hero-grid">
+<div class="portrait-wrap">
+<!-- Replace this placeholder with your portrait: <img src="images/robert-garcia.jpg" alt="Robert Garcia"> -->
+<div class="portrait-placeholder">
+<div aria-hidden="true" class="portrait-icon">RG</div>
+<span>YOUR PHOTO HERE</span>
+</div>
+</div>
+<div class="hero-content">
+<h1>Hi, I'm Robert Garcia <span>— CRO Specialist.</span></h1>
+<p class="hero-copy">I’m a CRO and digital experience professional with 5+ years of experience managing and optimizing e-commerce websites. I combine UX research, behavioral analysis, product page optimization, merchandising, analytics, and hands-on front-end development to make online shopping experiences clearer and easier to use.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#experience">Explore my experience <span aria-hidden="true">↘</span></a>
+<a class="button button-secondary" href="#contact">Let's connect</a>
+</div>
+<div class="hero-footnote">Conversion Optimization · UX Research · Behavioral Analysis · E-commerce Experience</div>
+</div>
+</div>
+</section>
+<div aria-label="Selected conversion and e-commerce performance metrics" class="metrics-band">
+<div class="wrap metrics">
+<div class="metric"><strong>$1.41M</strong><span>Starr annual online revenue · 2025</span></div>
+<div class="metric"><strong>909K+</strong><span>Starr website sessions · 2025</span></div>
+<div class="metric"><strong>1.03%</strong><span>Starr e-commerce conversion rate · 2025</span></div>
+<div class="metric"><strong>$121.05</strong><span>Starr average order value · 2025</span></div>
+</div>
+</div>
+<section id="experience">
+<div class="wrap">
+<div class="section-heading">
+<h2>Professional experience</h2>
+<p class="section-intro">Hands-on experience improving e-commerce performance through user behavior analysis, product page optimization, website navigation, merchandising, and digital experience improvements.</p>
+</div>
+<div class="experience-list">
+<article class="experience-card">
+<div aria-label="Starr Western Wear image gallery" class="experience-slider" data-slider="">
+<div class="slide active"><div class="visual-placeholder visual-western"><span>STARR WESTERN WEAR</span><small>Replace with storefront imagery</small></div></div>
+<div class="slide"><div class="visual-placeholder visual-store"><span>USER BEHAVIOR &amp; UX</span><small>Replace with Hotjar heatmap / recordings</small></div></div>
+<div class="slide"><div class="visual-placeholder visual-analytics"><span>ECOMMERCE PERFORMANCE</span><small>Replace with GA4 performance screenshot</small></div></div>
+<button aria-label="Previous image" class="slider-arrow prev" type="button">‹</button><button aria-label="Next image" class="slider-arrow next" type="button">›</button>
+<div aria-label="Choose image" class="slider-dots"><button aria-label="Image 1" class="active"></button><button aria-label="Image 2"></button><button aria-label="Image 3"></button></div>
+</div>
+<div class="experience-content">
+<div class="experience-topline"><span class="role">Website Manager | CRO &amp; UX Optimization</span><span class="date">July 2021 – Present</span></div>
+<h3>Starr Western Wear</h3>
+<ul><li>Managed and optimized a 10,000+ SKU Shopify storefront generating $1.41M in annual online revenue across 909K+ website sessions in 2025.</li><li>Used GA4 and Hotjar to review website performance and user behavior, identify friction points, and inform improvements to product pages, navigation, and the shopping journey.</li><li>Optimized product detail pages through improvements to product titles, descriptions, metadata, imagery, alt text, and content organization.</li><li>Improved site architecture, navigation, collections, filters, and internal linking to make products easier to discover and support a clearer shopping experience.</li><li>Monitored e-commerce performance; the storefront recorded a 1.03% conversion rate and $121.05 AOV in 2025.</li><li>Developed and customized Shopify themes and modular sections using Liquid, HTML, and CSS to support responsive layouts and tailored user experiences.</li><li>Improved website speed and Core Web Vitals through theme optimization, technical monitoring, and troubleshooting.</li><li>Implemented cookie consent and privacy-focused tracking configurations across GA4, Shopify, Meta, and Klaviyo.</li></ul>
+<div class="tag-row"><span class="tag">Shopify</span><span class="tag">CRO</span><span class="tag">GA4</span><span class="tag">Hotjar</span><span class="tag">UX Research</span><span class="tag">Merchandising</span><span class="tag">Liquid</span></div>
+<a class="site-button" href="#" rel="noopener noreferrer" target="_blank">View live site <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+<article class="experience-card">
+<div aria-label="Tempco Clothing image gallery" class="experience-slider" data-slider="">
+<div class="slide active"><div class="visual-placeholder visual-tempco"><span>TEMPCO CLOTHING</span><small>Replace with storefront imagery</small></div></div>
+<div class="slide"><div class="visual-placeholder visual-design"><span>SHOPIFY REDESIGN</span><small>Replace with redesign screenshots</small></div></div>
+<div class="slide"><div class="visual-placeholder visual-products"><span>PRODUCT EXPERIENCE</span><small>Replace with product page screenshots</small></div></div>
+<button aria-label="Previous image" class="slider-arrow prev" type="button">‹</button><button aria-label="Next image" class="slider-arrow next" type="button">›</button>
+<div aria-label="Choose image" class="slider-dots"><button aria-label="Image 1" class="active"></button><button aria-label="Image 2"></button><button aria-label="Image 3"></button></div>
+</div>
+<div class="experience-content">
+<div class="experience-topline"><span class="role">Website Manager | CRO &amp; UX Optimization</span><span class="date">July 2021 – Present</span></div>
+<h3>Tempco Clothing</h3>
+<ul><li>Led a complete Shopify redesign using Liquid, HTML, CSS, and AI-assisted development workflows, creating custom sections and layouts for a website generating $35.7K in annual online revenue.</li><li>Optimized product pages, collections, metadata, merchandising, and site navigation to improve product discovery and the overall shopping experience.</li><li>Reviewed website performance and user behavior through GA4 and Google Search Console to identify opportunities for usability, content, and performance improvements.</li><li>The storefront recorded a 1.13% e-commerce conversion rate and an $84.30 average order value in 2025.</li></ul>
+<div class="tag-row"><span class="tag">Shopify Redesign</span><span class="tag">UX Optimization</span><span class="tag">GA4</span><span class="tag">Product Discovery</span></div>
+<a class="site-button" href="#" rel="noopener noreferrer" target="_blank">View live site <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+<article class="experience-card">
+<div aria-label="The Shoppes at Solana image gallery" class="experience-slider" data-slider="">
+<div class="slide active"><div class="visual-placeholder visual-solana"><span>THE SHOPPES AT SOLANA</span><small>Replace with mall website imagery</small></div></div>
+<div class="slide"><div class="visual-placeholder visual-directory"><span>SITE STRUCTURE &amp; DIRECTORY</span><small>Replace with tenant directory screenshot</small></div></div>
+<button aria-label="Previous image" class="slider-arrow prev" type="button">‹</button><button aria-label="Next image" class="slider-arrow next" type="button">›</button>
+<div class="slider-dots"><button aria-label="Image 1" class="active"></button><button aria-label="Image 2"></button></div>
+</div>
+<div class="experience-content">
+<div class="experience-topline"><span class="role">Website Manager | Web Designer</span><span class="date">July 2023 – January 2026</span></div>
+<h3>The Shoppes at Solana</h3>
+<ul><li>Built and launched a custom Shopify website following a shopping mall acquisition and rebrand, establishing site architecture, navigation, custom layouts, and a centralized tenant directory.</li><li>Organized visitor-facing content across Dining, Shopping, and Play &amp; Services, and provided management with recommendations to improve usability, accessibility, and content organization.</li></ul><div class="tag-row"><span class="tag">Shopify</span><span class="tag">Website Design</span><span class="tag">Information Architecture</span><span class="tag">Accessibility</span></div>
+<a class="site-button" href="#" rel="noopener noreferrer" target="_blank">View live site <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+<article class="experience-card">
+<div aria-label="Union Fashion image gallery" class="experience-slider" data-slider="">
+<div class="slide active"><div class="visual-placeholder visual-union"><span>UNION FASHION</span><small>Replace with website imagery</small></div></div>
+<div class="slide"><div class="visual-placeholder visual-local"><span>LOCAL CUSTOMER EXPERIENCE</span><small>Replace with mobile / local search screenshot</small></div></div>
+<button aria-label="Previous image" class="slider-arrow prev" type="button">‹</button><button aria-label="Next image" class="slider-arrow next" type="button">›</button>
+<div class="slider-dots"><button aria-label="Image 1" class="active"></button><button aria-label="Image 2"></button></div>
+</div>
+<div class="experience-content">
+<div class="experience-topline"><span class="role">Website Manager | Local SEO &amp; Digital Experience</span><span class="date">December 2024 – Present</span></div>
+<h3>Union Fashion</h3>
+<ul><li>Designed and developed a custom Shopify website for a local retail business using Liquid, HTML, CSS, and AI-assisted development workflows.</li><li>Built geo-targeted content based on local keyword research and optimized Google Business Profile information, photos, posts, and updates to strengthen local discovery and encourage in-store visits.</li></ul><div class="tag-row"><span class="tag">Shopify</span><span class="tag">Local Business</span><span class="tag">UX</span><span class="tag">Google Business Profile</span></div>
+<a class="site-button" href="#" rel="noopener noreferrer" target="_blank">View live site <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+<article class="experience-card">
+<div aria-label="Belica Clothing image gallery" class="experience-slider" data-slider="">
+<div class="slide active"><div class="visual-placeholder visual-belica"><span>BELICA CLOTHING</span><small>Replace with brand / apparel imagery</small></div></div>
+<div class="slide"><div class="visual-placeholder visual-apparel"><span>PRODUCT &amp; BRAND DESIGN</span><small>Replace with original graphic designs</small></div></div>
+<button aria-label="Previous image" class="slider-arrow prev" type="button">‹</button><button aria-label="Next image" class="slider-arrow next" type="button">›</button>
+<div class="slider-dots"><button aria-label="Image 1" class="active"></button><button aria-label="Image 2"></button></div>
+</div>
+<div class="experience-content">
+<div class="experience-topline"><span class="role">Founder | E-commerce &amp; Brand Manager</span><span class="date">July 2019 – October 2020</span></div>
+<h3>Belica Clothing</h3>
+<ul><li>Independently founded and managed a Shopify apparel brand, overseeing website operations, product listings, merchandising, and online sales.</li><li>Designed 20+ apparel graphics and product concepts, managed product sourcing and supplier negotiations, and created product photography and marketing materials.</li><li>Managed Meta advertising campaigns and oversaw inventory, order fulfillment, customer service, and returns.</li></ul><div class="tag-row"><span class="tag">Shopify</span><span class="tag">E-commerce</span><span class="tag">Merchandising</span><span class="tag">Meta Ads</span><span class="tag">Brand Management</span></div>
+<a class="site-button" href="#" rel="noopener noreferrer" target="_blank">View live site <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="projects-section" id="projects">
+<div class="wrap">
+<div class="section-heading">
+<h2>Projects</h2>
+<p class="section-intro">Independent projects demonstrating product thinking, technical SEO knowledge, and hands-on website development.</p>
+</div>
+<div class="project-list">
+<article class="project-card">
+<div class="project-visual visual-tools"><div class="project-mock"><span class="mock-label">CASH TOOLS</span><strong>Practical financial calculators</strong><div class="mock-lines"><i></i><i></i><i></i></div><div class="mock-pills"><b></b><b></b><b></b></div></div></div>
+<div class="project-content">
+<h3>Cash Tools</h3>
+<p>A financial tools and resources website that I independently develop and manage, with a focus on useful calculators, clear content, mobile usability, and a straightforward visitor experience.</p>
+<ul><li>Independently developed and manage the website, overseeing its structure, content, and user experience.</li><li>Build interactive financial calculators and website features with attention to usability and mobile responsiveness.</li><li>Improve page speed and performance while monitoring search visibility and visitor discovery through Google Search Console and analytics.</li></ul>
+<a class="site-button" href="https://www.cashtools.org/" rel="noopener noreferrer" target="_blank">Visit Cash Tools <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+<article class="project-card">
+<div class="project-visual visual-inspector"><div class="project-mock"><span class="mock-label">SEO PAGE INSPECTOR</span><strong>Page-level SEO diagnostics</strong><div class="mock-lines"><i></i><i></i><i></i></div><div class="mock-pills"><b></b><b></b><b></b></div></div></div>
+<div class="project-content">
+<h3>SEO Page Inspector</h3>
+<p>A browser-based SEO inspection tool conceptualized and built to make page-level information easier to review, with an emphasis on a clear interface and practical reporting.</p>
+<ul><li>Conceptualized and built the tool, defining its architecture, workflows, and user experience.</li><li>Directed AI-assisted development using HTML, CSS, and JavaScript, personally testing, debugging, and refining functionality.</li></ul>
+<a class="site-button" href="https://robertgarcia305.github.io/seo-tools/seo-page-inspector.html" rel="noopener noreferrer" target="_blank">Explore SEO Page Inspector <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section id="skills">
+<div class="wrap">
+<div class="section-heading">
+<h2>Technical skills</h2>
+<p class="section-intro">A blend of conversion optimization, user research, e-commerce analytics, front-end development, and design tools.</p>
+</div>
+<div class="skills-grid">
+<article class="skill-card"><h3>CRO &amp; Digital Experience</h3><ul><li>Conversion Rate Optimization</li><li>UX Research</li><li>Behavioral Analysis</li><li>Customer Journey Optimization</li><li>Product Page Optimization</li><li>Navigation &amp; Information Architecture</li><li>Merchandising</li><li>Usability Improvements</li></ul></article>
+<article class="skill-card"><h3>Analytics &amp; Research</h3><ul><li>Google Analytics 4 (GA4)</li><li>Hotjar</li><li>Google Search Console</li><li>Semrush</li><li>PageSpeed Insights</li><li>E-commerce Performance Analysis</li></ul></article>
+<article class="skill-card"><h3>Web Development &amp; Platforms</h3><ul><li>Shopify</li><li>Shopify Liquid</li><li>WordPress</li><li>HTML</li><li>CSS</li><li>JavaScript (Basic Working Knowledge)</li><li>SQL (Basic Knowledge)</li><li>Responsive Web Design</li><li>Website Accessibility</li></ul></article>
+<article class="skill-card"><h3>Design &amp; Tools</h3><ul><li>Figma</li><li>Adobe Photoshop</li><li>Image Optimization</li><li>Meta Ads</li><li>Google Workspace</li><li>Excel</li><li>AI-Assisted Development</li></ul></article>
+</div>
+</div>
+</section>
+<section class="background-section">
+<div class="wrap">
+<div class="section-heading"><h2>Education, certificates &amp; languages</h2></div>
+<article class="background-card">
+<div class="background-row"><strong>Education</strong><div><b>Universidad Autónoma de Nuevo León (UANL)</b><p>Bachelor's Degree in Marketing (Licenciatura en Mercadotecnia) <span>· July 2015 – December 2019</span></p></div></div>
+<div class="background-row"><strong>Certificates</strong><div><b>Digital Skills: User Experience — Accenture, FutureLearn</b></div></div>
+<div class="background-row"><strong>Languages</strong><div><b>Spanish (Native) · English (Fluent)</b></div></div>
+</article>
+</div>
+</section>
+<section class="contact-section" id="contact">
+<div class="wrap contact-inner">
+<div><h2>Have questions about my portfolio? Let's connect!</h2><p>Get in touch to discuss conversion optimization, user experience, and e-commerce opportunities.</p></div>
+<div class="contact-links"><a class="primary" href="mailto:robertserranogar@gmail.com">Email me</a><a href="tel:9159960387">Call me</a></div>
+</div>
+</section>
+</main>
+<footer><div class="wrap"><span>© <span id="year">CRO &amp; Digital Experience</span> Robert Garcia</span><span>E-commerce &amp; Website Management</span></div></footer>
+<script>
+    const topbar = document.getElementById("topbar");
+    const updateHeader = () => topbar.classList.toggle("scrolled", window.scrollY > 18);
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    updateHeader();
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll("[data-slider]").forEach((slider) => {
+      const slides = [...slider.querySelectorAll(".slide")];
+      const dots = [...slider.querySelectorAll(".slider-dots button")];
+      let current = 0;
+      const show = (index) => {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+        dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+      };
+      slider.querySelector(".prev").addEventListener("click", () => show(current - 1));
+      slider.querySelector(".next").addEventListener("click", () => show(current + 1));
+      dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
+    });
   </script>
 </body>
 </html>
