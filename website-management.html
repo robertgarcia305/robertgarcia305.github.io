@@ -1,247 +1,495 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Robert Garcia — E-commerce and Website Management professional specializing in Shopify operations, website development, product management, technical SEO, and UX optimization.">
-  <meta name="theme-color" content="#101827">
-  <title>Robert Garcia | E-commerce & Website Management</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="img/robert-garcia-favicon.png">
-</head>
-<body>
-  <header class="topbar" id="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#home">ROBERT GARCIA</a>
-      <nav aria-label="Main navigation">
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-download" href="res/Roberto_Garcia_Ecommerce_Website_Management_Resume.pdf" target="_blank">Download Resume <span aria-hidden="true">↓</span></a>
-      </nav>
-    </div>
-  </header>
-  <a class="floating-email" href="mailto:robertserranogar@gmail.com">Email me <span aria-hidden="true">↗</span></a>
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div><div class="hero-orb orb-three"></div>
-      <div class="wrap hero-grid">
-        <div class="portrait-wrap">
-          <!-- Replace this placeholder with your portrait: <img src="images/robert-garcia.jpg" alt="Robert Garcia"> -->
-          <div class="portrait-placeholder">
-            <div class="portrait-icon" aria-hidden="true">RG</div>
-            <span>YOUR PHOTO HERE</span>
-          </div>
-          
-        </div>
-        <div class="hero-content">
-          <h1>Hi, I'm Robert Garcia <span>— Website Manager.</span></h1>
-          <p class="hero-copy">Hi, I’m Robert Garcia! I’m a website manager with 5+ years of experience working with Shopify, building and improving websites, managing product catalogs, and creating better online shopping experiences. I enjoy combining technology, creativity, and problem-solving to make websites work better for both businesses and their customers.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#experience">Explore my experience <span aria-hidden="true">↘</span></a>
-            <a class="button button-secondary" href="#contact">Let's connect</a>
-          </div>
-          <div class="hero-footnote">Shopify · Website Operations · Development · Digital Experience</div>
-        </div>
-      </div>
-    </section>
-    <div class="metrics-band" aria-label="Selected professional metrics">
-      <div class="wrap metrics">
-        <div class="metric"><strong>$1.41M</strong><span>Starr annual online revenue · 2025</span></div>
-        <div class="metric"><strong>10K+</strong><span>Products in catalog</span></div>
-        <div class="metric"><strong>909K+</strong><span>Annual website sessions · 2025</span></div>
-        <div class="metric"><strong>1.03%</strong><span>E-commerce conversion rate · 2025</span></div>
-      </div>
-    </div>
-    <section id="experience">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>Professional experience</h2>
-          <p class="section-intro">Hands-on experience managing e-commerce operations, developing storefronts, and improving the customer experience.</p>
-        </div>
-        <div class="experience-list">
-          <article class="experience-card">
-            <div class="experience-slider" data-slider aria-label="Starr Western Wear image gallery">
-              <div class="slide active"><div class="visual-placeholder visual-western"><span>STARR WESTERN WEAR</span><small>Replace with storefront / product imagery</small></div></div>
-              <div class="slide"><div class="visual-placeholder visual-store"><span>ECOMMERCE OPERATIONS</span><small>Replace with Shopify admin / catalog imagery</small></div></div>
-              <div class="slide"><div class="visual-placeholder visual-analytics"><span>PERFORMANCE & ANALYTICS</span><small>Replace with analytics screenshot</small></div></div>
-              <button class="slider-arrow prev" type="button" aria-label="Previous image">‹</button><button class="slider-arrow next" type="button" aria-label="Next image">›</button>
-              <div class="slider-dots" aria-label="Choose image"><button class="active" aria-label="Image 1"></button><button aria-label="Image 2"></button><button aria-label="Image 3"></button></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Robert Garcia — E-commerce and Website Management professional specializing in Shopify operations, website development, product management, technical SEO, and UX optimization."
+        />
+        <meta name="theme-color" content="#101827" />
+        <title>Robert Garcia | E-commerce & Website Management</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/png" href="img/robert-garcia-favicon.png" />
+    </head>
+    <body>
+        <header class="topbar" id="topbar">
+            <div class="wrap topbar-inner">
+                <a class="brand" href="#home">ROBERT GARCIA</a>
+                <nav aria-label="Main navigation">
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                    <a
+                        class="nav-download"
+                        href="res/Roberto_Garcia_Ecommerce_Website_Management_Resume.pdf"
+                        target="_blank"
+                        >Download Resume <span aria-hidden="true">↓</span></a
+                    >
+                </nav>
             </div>
-            <div class="experience-content">
-              <div class="experience-topline"><span class="role">Website Manager | SEO Specialist</span><span class="date">July 2021 – Present</span></div>
-              <h3>Starr Western Wear</h3>
-              <ul>
-                <li>Manage day-to-day Shopify operations for a 10,000+ SKU catalog on an e-commerce website generating $1.41M in annual online revenue.</li>
-                <li>Optimize product detail pages, including titles, descriptions, metadata, imagery, and alt text, on a storefront recording a 1.03% e-commerce conversion rate across 909K+ annual sessions.</li>
-                <li>Develop and customize Shopify themes and modular sections using Liquid, HTML, and CSS to deploy UX improvements and new storefront functionality.</li>
-                <li>Restructure site architecture, navigation, and internal linking to strengthen crawlability, organic product discoverability, and the customer shopping journey.</li>
-                <li>Manage multichannel e-commerce integrations across Google Merchant Center, Meta, TikTok Shop, and Klaviyo to sync product feeds and support paid and retention campaigns.</li>
-                <li>Improve site speed and Core Web Vitals through ongoing technical monitoring, theme optimization, and troubleshooting across desktop and mobile storefronts.</li>
-              </ul>
-              <div class="tag-row"><span class="tag">Shopify</span><span class="tag">Liquid</span><span class="tag">Merchandising</span><span class="tag">UX</span><span class="tag">Technical SEO</span><span class="tag">Analytics</span></div>
-              <a class="site-button" href="#" target="_blank" rel="noopener noreferrer">View live site <span aria-hidden="true">↗</span></a>
+        </header>
+        <a class="floating-email" href="mailto:robertserranogar@gmail.com"
+            >Email me <span aria-hidden="true">↗</span></a
+        >
+        <main>
+            <section class="hero" id="home">
+                <div class="hero-orb orb-one"></div>
+                <div class="hero-orb orb-two"></div>
+                <div class="hero-orb orb-three"></div>
+                <div class="wrap hero-grid">
+                    <div class="portrait-wrap">
+                        <div class="portrait-wrap">
+                            <img src="img/robert-garcia-profile-picture.png" alt="Robert Garcia" />
+                        </div>
+                    </div>
+                    <div class="hero-content">
+                        <h1>Hi, I'm Robert Garcia <span>— Website Manager.</span></h1>
+                        <p class="hero-copy">
+                            Hi, I’m Robert Garcia! I’m a website manager with 5+ years of experience working with
+                            Shopify, building and improving websites, managing product catalogs, and creating better
+                            online shopping experiences. I enjoy combining technology, creativity, and problem-solving
+                            to make websites work better for both businesses and their customers.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="#experience"
+                                >Explore my experience <span aria-hidden="true">↘</span></a
+                            >
+                            <a class="button button-secondary" href="#contact">Let's connect</a>
+                        </div>
+                        <div class="hero-footnote">Shopify · Website Operations · Development · Digital Experience</div>
+                    </div>
+                </div>
+            </section>
+            <div class="metrics-band" aria-label="Selected professional metrics">
+                <div class="wrap metrics">
+                    <div class="metric"><strong>$1.41M</strong><span>Starr annual online revenue · 2025</span></div>
+                    <div class="metric"><strong>10K+</strong><span>Products in catalog</span></div>
+                    <div class="metric"><strong>909K+</strong><span>Annual website sessions · 2025</span></div>
+                    <div class="metric"><strong>1.03%</strong><span>E-commerce conversion rate · 2025</span></div>
+                </div>
             </div>
-          </article>
-          <article class="experience-card">
-            <div class="experience-slider" data-slider aria-label="Tempco Clothing image gallery">
-              <div class="slide active"><div class="visual-placeholder visual-tempco"><span>TEMPCO CLOTHING</span><small>Replace with storefront imagery</small></div></div>
-              <div class="slide"><div class="visual-placeholder visual-design"><span>WEBSITE REDESIGN</span><small>Replace with redesign screenshot</small></div></div>
-              <div class="slide"><div class="visual-placeholder visual-products"><span>PRODUCT EXPERIENCE</span><small>Replace with product page screenshot</small></div></div>
-              <button class="slider-arrow prev" type="button" aria-label="Previous image">‹</button><button class="slider-arrow next" type="button" aria-label="Next image">›</button>
-              <div class="slider-dots" aria-label="Choose image"><button class="active" aria-label="Image 1"></button><button aria-label="Image 2"></button><button aria-label="Image 3"></button></div>
+            <section id="experience">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <h2>Professional experience</h2>
+                        <p class="section-intro">
+                            Hands-on experience managing e-commerce operations, developing storefronts, and improving
+                            the customer experience.
+                        </p>
+                    </div>
+                    <div class="experience-list">
+                        <article class="experience-card">
+                            <div class="experience-slider">
+                                <img
+                                    src="img/sww/sww-1.webp"
+                                    alt="Starr Western Wear ecommerce storefront"
+                                    class="experience-image"
+                                />
+                            </div>
+                            <div class="experience-content">
+                                <div class="experience-topline">
+                                    <span class="role">Website Manager | SEO Specialist</span
+                                    ><span class="date">July 2021 – Present</span>
+                                </div>
+                                <h3>Starr Western Wear</h3>
+                                <ul>
+                                    <li>
+                                        Manage day-to-day Shopify operations for a 10,000+ SKU catalog on an e-commerce
+                                        website generating $1.41M in annual online revenue.
+                                    </li>
+                                    <li>
+                                        Optimize product detail pages, including titles, descriptions, metadata,
+                                        imagery, and alt text, on a storefront recording a 1.03% e-commerce conversion
+                                        rate across 909K+ annual sessions.
+                                    </li>
+                                    <li>
+                                        Develop and customize Shopify themes and modular sections using Liquid, HTML,
+                                        and CSS to deploy UX improvements and new storefront functionality.
+                                    </li>
+                                    <li>
+                                        Restructure site architecture, navigation, and internal linking to strengthen
+                                        crawlability, organic product discoverability, and the customer shopping
+                                        journey.
+                                    </li>
+                                    <li>
+                                        Manage multichannel e-commerce integrations across Google Merchant Center, Meta,
+                                        TikTok Shop, and Klaviyo to sync product feeds and support paid and retention
+                                        campaigns.
+                                    </li>
+                                    <li>
+                                        Improve site speed and Core Web Vitals through ongoing technical monitoring,
+                                        theme optimization, and troubleshooting across desktop and mobile storefronts.
+                                    </li>
+                                </ul>
+                                <div class="tag-row">
+                                    <span class="tag">Shopify</span><span class="tag">Liquid</span
+                                    ><span class="tag">Merchandising</span><span class="tag">UX</span
+                                    ><span class="tag">Technical SEO</span><span class="tag">Analytics</span>
+                                </div>
+                                <a class="site-button" href="https://starrwesternwear.com/" target="_blank" rel="noopener noreferrer"
+                                    >View live site <span aria-hidden="true">↗</span></a
+                                >
+                            </div>
+                        </article>
+                        <article class="experience-card">
+                            <div class="experience-slider">
+                                <img
+                                    src="img/tempco/tempco-1.webp"
+                                    alt="Tempco ecommerce storefront"
+                                    class="experience-image"
+                                />
+                            </div>
+                            <div class="experience-content">
+                                <div class="experience-topline">
+                                    <span class="role">Website Manager</span
+                                    ><span class="date">July 2021 – Present</span>
+                                </div>
+                                <h3>Tempco Clothing</h3>
+                                <ul>
+                                    <li>
+                                        Led a full Shopify website redesign using Liquid, HTML, CSS, and AI-assisted
+                                        development workflows, building custom sections and layouts for a website
+                                        generating $35.7K in annual online revenue and recording a 1.13% e-commerce
+                                        conversion rate.
+                                    </li>
+                                    <li>
+                                        Managed day-to-day Shopify operations across product listings, collections,
+                                        metadata, merchandising, and third-party app integrations.
+                                    </li>
+                                    <li>
+                                        Executed UX, site speed, and SEO improvements while tracking funnel performance,
+                                        search visibility, and user behavior through GA4 and Google Search Console.
+                                    </li>
+                                </ul>
+                                <div class="tag-row">
+                                    <span class="tag">Shopify redesign</span
+                                    ><span class="tag">AI-assisted development</span
+                                    ><span class="tag">UX optimization</span><span class="tag">GA4</span>
+                                </div>
+                                <a class="site-button" href="https://tempcoclothing.com/" target="_blank" rel="noopener noreferrer"
+                                    >View live site <span aria-hidden="true">↗</span></a
+                                >
+                            </div>
+                        </article>
+                        <article class="experience-card">
+                            <div class="experience-slider">
+                                <img
+                                    src="img/the-shoppes-at-solana/the-shoppes-at-solana-1.webp"
+                                    alt="The Solana Mall ecommerce storefront"
+                                    class="experience-image"
+                                />
+                            </div>
+                            <div class="experience-content">
+                                <div class="experience-topline">
+                                    <span class="role">Website Manager</span
+                                    ><span class="date">July 2023 – January 2026</span>
+                                </div>
+                                <h3>The Shoppes at Solana</h3>
+                                <ul>
+                                    <li>
+                                        Led the creation and initial development of a shopping mall website following
+                                        its acquisition and rebranding.
+                                    </li>
+                                    <li>
+                                        Designed and developed the website using Shopify, Liquid, HTML, and CSS,
+                                        establishing its structure, navigation, content organization, and custom
+                                        layouts.
+                                    </li>
+                                </ul>
+                                <!-- <a class="site-button" href="#" target="_blank" rel="noopener noreferrer"
+                                    >View live site <span aria-hidden="true">↗</span></a
+                                > -->
+                            </div>
+                        </article>
+                        <article class="experience-card">
+                            <div class="experience-slider">
+                                <img
+                                    src="img/union/union-fash-1.webp"
+                                    alt="Union Fashion ecommerce storefront"
+                                    class="experience-image"
+                                />
+                            </div>
+                            <div class="experience-content">
+                                <div class="experience-topline">
+                                    <span class="role">Website Manager</span
+                                    ><span class="date">December 2024 – Present</span>
+                                </div>
+                                <h3>Union Fashion</h3>
+                                <ul>
+                                    <li>
+                                        Designed and developed a custom-coded Shopify website using Liquid, HTML, CSS,
+                                        and AI-assisted development.
+                                    </li>
+                                    <li>
+                                        Manage Google Business Profile information, photos, posts, and business updates
+                                        to support local visibility.
+                                    </li>
+                                </ul>
+                                <a class="site-button" href="https://unionfashion.com/" target="_blank" rel="noopener noreferrer"
+                                    >View live site <span aria-hidden="true">↗</span></a
+                                >
+                            </div>
+                        </article>
+                        <article class="experience-card">
+                            <div class="experience-slider">
+                                <img
+                                    src="img/b-clothing/belica.webp"
+                                    alt="Belica ecommerce storefront"
+                                    class="experience-image"
+                                />
+                            </div>
+                            <div class="experience-content">
+                                <div class="experience-topline">
+                                    <span class="role">Founder</span><span class="date">July 2019 – October 2020</span>
+                                </div>
+                                <h3>Belica Clothing</h3>
+                                <ul>
+                                    <li>
+                                        Independently founded and managed a Shopify apparel brand, overseeing website
+                                        operations, product listings, merchandising, and online sales.
+                                    </li>
+                                    <li>
+                                        Designed 20+ apparel graphics and product concepts, and managed product
+                                        sourcing, supplier negotiations, and selection.
+                                    </li>
+                                    <li>
+                                        Created product photography and marketing materials, and managed Meta
+                                        advertising campaigns.
+                                    </li>
+                                    <li>
+                                        Oversaw inventory, order fulfillment, customer service, and returns, and
+                                        completed the brand's trademark registration with the USPTO.
+                                    </li>
+                                </ul>
+                                <!-- <a class="site-button" href="#" target="_blank" rel="noopener noreferrer"
+                                    >View live site <span aria-hidden="true">↗</span></a
+                                > -->
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="projects-section" id="projects">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <h2>Projects</h2>
+                        <p class="section-intro">
+                            Independent projects demonstrating product thinking, technical SEO knowledge, and hands-on
+                            website development.
+                        </p>
+                    </div>
+                    <div class="project-list">
+                        <article class="project-card">
+                            <div class="project-visual">
+                                <img
+                                    src="img/cash-tools/cash-tools-1.webp"
+                                    alt="Cash Tools website showing financial calculators"
+                                    class="project-image"
+                                />
+                            </div>
+                            <div class="project-content">
+                                <h3>Cash Tools</h3>
+                                <p>
+                                    A financial tools and resources website that I independently develop and manage,
+                                    combining SEO research, content publishing, and interactive utility development.
+                                </p>
+                                <ul>
+                                    <li>Conduct keyword research and develop content based on search opportunities.</li>
+                                    <li>
+                                        Build and maintain interactive calculators, website features, and supporting
+                                        articles.
+                                    </li>
+                                    <li>
+                                        Manage site architecture, internal linking, technical SEO, structured data,
+                                        mobile usability, and performance.
+                                    </li>
+                                    <li>
+                                        Monitor organic search visibility and site performance through Google Search
+                                        Console and GA4.
+                                    </li>
+                                </ul>
+                                <a
+                                    class="site-button"
+                                    href="https://www.cashtools.org/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Visit Cash Tools <span aria-hidden="true">↗</span></a
+                                >
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div class="project-visual">
+                                <img
+                                    src="img/seo-tool/seo-tool-1.webp"
+                                    alt="SEO Tools website inspector"
+                                    class="project-image"
+                                />
+                            </div>
+                            <div class="project-content">
+                                <h3>SEO Page Inspector</h3>
+                                <p>
+                                    A browser-based SEO inspection tool conceptualized and developed to surface granular
+                                    page-level diagnostics and make technical page reviews easier to examine.
+                                </p>
+                                <ul>
+                                    <li>Defined the tool's architecture, workflows, features, and user experience.</li>
+                                    <li>
+                                        Directed AI-assisted development using HTML, CSS, and JavaScript, then tested,
+                                        debugged, and refined its functionality.
+                                    </li>
+                                    <li>
+                                        Built inspection modules for headings, metadata, internal and external links,
+                                        image attributes, scripts, and JSON-LD structured data.
+                                    </li>
+                                    <li>
+                                        Implemented CSV and JSON report exports for technical SEO documentation and
+                                        spreadsheet analysis.
+                                    </li>
+                                </ul>
+                                <a
+                                    class="site-button"
+                                    href="https://robertgarcia305.github.io/seo-tools/seo-page-inspector.html"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Explore SEO Page Inspector <span aria-hidden="true">↗</span></a
+                                >
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section id="skills">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <h2>Technical skills</h2>
+                        <p class="section-intro">
+                            A combination of e-commerce platforms, front-end implementation, analytics, and digital
+                            experience skills.
+                        </p>
+                    </div>
+                    <div class="skills-grid">
+                        <article class="skill-card">
+                            <h3>E-commerce & Platforms</h3>
+                            <ul>
+                                <li>Shopify</li>
+                                <li>Shopify Liquid</li>
+                                <li>WordPress</li>
+                                <li>Google Merchant Center</li>
+                                <li>Klaviyo</li>
+                                <li>TikTok Shop</li>
+                                <li>Meta Ads</li>
+                            </ul>
+                        </article>
+                        <article class="skill-card">
+                            <h3>Web Development & Technical</h3>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>SQL</li>
+                                <li>Custom Shopify Sections</li>
+                                <li>Website Accessibility</li>
+                                <li>Privacy & Cookie Consent</li>
+                            </ul>
+                        </article>
+                        <article class="skill-card">
+                            <h3>Analytics & Optimization</h3>
+                            <ul>
+                                <li>Conversion Rate Optimization (CRO)</li>
+                                <li>Google Analytics 4 (GA4)</li>
+                                <li>Google Search Console</li>
+                                <li>Semrush</li>
+                                <li>Hotjar</li>
+                                <li>PageSpeed Insights</li>
+                            </ul>
+                        </article>
+                        <article class="skill-card">
+                            <h3>UX, Design & Tools</h3>
+                            <ul>
+                                <li>UI/UX Design</li>
+                                <li>UX Research</li>
+                                <li>Behavioral Analysis</li>
+                                <li>Figma</li>
+                                <li>Adobe Photoshop</li>
+                                <li>Image Optimization</li>
+                                <li>Excel & Google Workspace</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="background-section">
+                <div class="wrap">
+                    <div class="section-heading"><h2>Education, certificates & languages</h2></div>
+                    <article class="background-card">
+                        <div class="background-row">
+                            <strong>Education</strong>
+                            <div>
+                                <b>Universidad Autónoma de Nuevo León (UANL)</b>
+                                <p>
+                                    Bachelor's Degree in Marketing (Licenciatura en Mercadotecnia)
+                                    <span>· July 2015 – December 2019</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="background-row">
+                            <strong>Certificates</strong>
+                            <div><b>Digital Skills: User Experience — Accenture, FutureLearn</b></div>
+                        </div>
+                        <div class="background-row">
+                            <strong>Languages</strong>
+                            <div><b>Spanish (Native) · English (Fluent)</b></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="contact-section" id="contact">
+                <div class="wrap contact-inner">
+                    <div>
+                        <h2>Have questions about my portfolio? Let's connect!</h2>
+                        <p>
+                            Get in touch to discuss website management, Shopify, and digital experience opportunities.
+                        </p>
+                    </div>
+                    <div class="contact-links">
+                        <a class="primary" href="mailto:robertserranogar@gmail.com">Email me</a
+                        ><a href="tel:9159960387">Call me</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrap">
+                <span>© <span id="year">2026</span> Robert Garcia</span><span>E-commerce & Website Management</span>
             </div>
-            <div class="experience-content">
-              <div class="experience-topline"><span class="role">Website Manager</span><span class="date">July 2021 – Present</span></div>
-              <h3>Tempco Clothing</h3>
-              <ul>
-                <li>Led a full Shopify website redesign using Liquid, HTML, CSS, and AI-assisted development workflows, building custom sections and layouts for a website generating $35.7K in annual online revenue and recording a 1.13% e-commerce conversion rate.</li>
-                <li>Managed day-to-day Shopify operations across product listings, collections, metadata, merchandising, and third-party app integrations.</li>
-                <li>Executed UX, site speed, and SEO improvements while tracking funnel performance, search visibility, and user behavior through GA4 and Google Search Console.</li>
-              </ul>
-              <div class="tag-row"><span class="tag">Shopify redesign</span><span class="tag">AI-assisted development</span><span class="tag">UX optimization</span><span class="tag">GA4</span></div>
-              <a class="site-button" href="#" target="_blank" rel="noopener noreferrer">View live site <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-          <article class="experience-card">
-            <div class="experience-slider" data-slider aria-label="The Shoppes at Solana image gallery">
-              <div class="slide active"><div class="visual-placeholder visual-solana"><span>THE SHOPPES AT SOLANA</span><small>Replace with mall website imagery</small></div></div>
-              <div class="slide"><div class="visual-placeholder visual-directory"><span>TENANT DIRECTORY</span><small>Replace with directory screenshot</small></div></div>
-              <button class="slider-arrow prev" type="button" aria-label="Previous image">‹</button><button class="slider-arrow next" type="button" aria-label="Next image">›</button>
-              <div class="slider-dots"><button class="active" aria-label="Image 1"></button><button aria-label="Image 2"></button></div>
-            </div>
-            <div class="experience-content">
-              <div class="experience-topline"><span class="role">Website Manager</span><span class="date">July 2023 – January 2026</span></div>
-              <h3>The Shoppes at Solana</h3>
-              <ul>
-                <li>Led the creation and initial development of a shopping mall website following its acquisition and rebranding.</li>
-                <li>Designed and developed the website using Shopify, Liquid, HTML, and CSS, establishing its structure, navigation, content organization, and custom layouts.</li>
-              </ul>
-              <a class="site-button" href="#" target="_blank" rel="noopener noreferrer">View live site <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-          <article class="experience-card">
-            <div class="experience-slider" data-slider aria-label="Union Fashion image gallery">
-              <div class="slide active"><div class="visual-placeholder visual-union"><span>UNION FASHION</span><small>Replace with website / store imagery</small></div></div>
-              <div class="slide"><div class="visual-placeholder visual-local"><span>LOCAL SEARCH PRESENCE</span><small>Replace with Google Business Profile screenshot</small></div></div>
-              <button class="slider-arrow prev" type="button" aria-label="Previous image">‹</button><button class="slider-arrow next" type="button" aria-label="Next image">›</button>
-              <div class="slider-dots"><button class="active" aria-label="Image 1"></button><button aria-label="Image 2"></button></div>
-            </div>
-            <div class="experience-content">
-              <div class="experience-topline"><span class="role">Website Manager</span><span class="date">December 2024 – Present</span></div>
-              <h3>Union Fashion</h3>
-              <ul>
-                <li>Designed and developed a custom-coded Shopify website using Liquid, HTML, CSS, and AI-assisted development.</li>
-                <li>Manage Google Business Profile information, photos, posts, and business updates to support local visibility.</li>
-              </ul>
-              <a class="site-button" href="#" target="_blank" rel="noopener noreferrer">View live site <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-          <article class="experience-card">
-            <div class="experience-slider" data-slider aria-label="Belica Clothing image gallery">
-              <div class="slide active"><div class="visual-placeholder visual-belica"><span>BELICA CLOTHING</span><small>Replace with brand / apparel imagery</small></div></div>
-              <div class="slide"><div class="visual-placeholder visual-apparel"><span>APPAREL DESIGN</span><small>Replace with original graphic designs</small></div></div>
-              <button class="slider-arrow prev" type="button" aria-label="Previous image">‹</button><button class="slider-arrow next" type="button" aria-label="Next image">›</button>
-              <div class="slider-dots"><button class="active" aria-label="Image 1"></button><button aria-label="Image 2"></button></div>
-            </div>
-            <div class="experience-content">
-              <div class="experience-topline"><span class="role">Founder</span><span class="date">July 2019 – October 2020</span></div>
-              <h3>Belica Clothing</h3>
-              <ul>
-                <li>Independently founded and managed a Shopify apparel brand, overseeing website operations, product listings, merchandising, and online sales.</li>
-                <li>Designed 20+ apparel graphics and product concepts, and managed product sourcing, supplier negotiations, and selection.</li>
-                <li>Created product photography and marketing materials, and managed Meta advertising campaigns.</li>
-                <li>Oversaw inventory, order fulfillment, customer service, and returns, and completed the brand's trademark registration with the USPTO.</li>
-              </ul>
-              <a class="site-button" href="#" target="_blank" rel="noopener noreferrer">View live site <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="projects-section" id="projects">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>Projects</h2>
-          <p class="section-intro">Independent projects demonstrating product thinking, technical SEO knowledge, and hands-on website development.</p>
-        </div>
-        <div class="project-list">
-          <article class="project-card">
-            <div class="project-visual visual-tools"><div class="project-mock"><span class="mock-label">CASH TOOLS</span><strong>Practical financial calculators</strong><div class="mock-lines"><i></i><i></i><i></i></div><div class="mock-pills"><b></b><b></b><b></b></div></div></div>
-            <div class="project-content">
-              <h3>Cash Tools</h3>
-              <p>A financial tools and resources website that I independently develop and manage, combining SEO research, content publishing, and interactive utility development.</p>
-              <ul><li>Conduct keyword research and develop content based on search opportunities.</li><li>Build and maintain interactive calculators, website features, and supporting articles.</li><li>Manage site architecture, internal linking, technical SEO, structured data, mobile usability, and performance.</li><li>Monitor organic search visibility and site performance through Google Search Console and GA4.</li></ul>
-              <a class="site-button" href="https://www.cashtools.org/" target="_blank" rel="noopener noreferrer">Visit Cash Tools <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-visual visual-inspector"><div class="project-mock"><span class="mock-label">SEO PAGE INSPECTOR</span><strong>Page-level SEO diagnostics</strong><div class="mock-lines"><i></i><i></i><i></i></div><div class="mock-pills"><b></b><b></b><b></b></div></div></div>
-            <div class="project-content">
-              <h3>SEO Page Inspector</h3>
-              <p>A browser-based SEO inspection tool conceptualized and developed to surface granular page-level diagnostics and make technical page reviews easier to examine.</p>
-              <ul><li>Defined the tool's architecture, workflows, features, and user experience.</li><li>Directed AI-assisted development using HTML, CSS, and JavaScript, then tested, debugged, and refined its functionality.</li><li>Built inspection modules for headings, metadata, internal and external links, image attributes, scripts, and JSON-LD structured data.</li><li>Implemented CSV and JSON report exports for technical SEO documentation and spreadsheet analysis.</li></ul>
-              <a class="site-button" href="https://robertgarcia305.github.io/seo-tools/seo-page-inspector.html" target="_blank" rel="noopener noreferrer">Explore SEO Page Inspector <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section id="skills">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>Technical skills</h2>
-          <p class="section-intro">A combination of e-commerce platforms, front-end implementation, analytics, and digital experience skills.</p>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-card"><h3>E-commerce & Platforms</h3><ul><li>Shopify</li><li>Shopify Liquid</li><li>WordPress</li><li>Google Merchant Center</li><li>Klaviyo</li><li>TikTok Shop</li><li>Meta Ads</li></ul></article>
-          <article class="skill-card"><h3>Web Development & Technical</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SQL</li><li>Custom Shopify Sections</li><li>Website Accessibility</li><li>Privacy & Cookie Consent</li></ul></article>
-          <article class="skill-card"><h3>Analytics & Optimization</h3><ul><li>Conversion Rate Optimization (CRO)</li><li>Google Analytics 4 (GA4)</li><li>Google Search Console</li><li>Semrush</li><li>Hotjar</li><li>PageSpeed Insights</li></ul></article>
-          <article class="skill-card"><h3>UX, Design & Tools</h3><ul><li>UI/UX Design</li><li>UX Research</li><li>Behavioral Analysis</li><li>Figma</li><li>Adobe Photoshop</li><li>Image Optimization</li><li>Excel & Google Workspace</li></ul></article>
-        </div>
-      </div>
-    </section>
-    <section class="background-section">
-      <div class="wrap">
-        <div class="section-heading"><h2>Education, certificates & languages</h2></div>
-        <article class="background-card">
-          <div class="background-row"><strong>Education</strong><div><b>Universidad Autónoma de Nuevo León (UANL)</b><p>Bachelor's Degree in Marketing (Licenciatura en Mercadotecnia) <span>· July 2015 – December 2019</span></p></div></div>
-          <div class="background-row"><strong>Certificates</strong><div><b>Digital Skills: User Experience — Accenture, FutureLearn</b></div></div>
-          <div class="background-row"><strong>Languages</strong><div><b>Spanish (Native) · English (Fluent)</b></div></div>
-        </article>
-      </div>
-    </section>
-    <section class="contact-section" id="contact">
-      <div class="wrap contact-inner">
-        <div><h2>Have questions about my portfolio? Let's connect!</h2><p>Get in touch to discuss website management, Shopify, and digital experience opportunities.</p></div>
-        <div class="contact-links"><a class="primary" href="mailto:robertserranogar@gmail.com">Email me</a><a href="tel:9159960387">Call me</a></div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="wrap"><span>© <span id="year">2026</span> Robert Garcia</span><span>E-commerce & Website Management</span></div></footer>
-  <script>
-    const topbar = document.getElementById("topbar");
-    const updateHeader = () => topbar.classList.toggle("scrolled", window.scrollY > 18);
-    window.addEventListener("scroll", updateHeader, { passive: true });
-    updateHeader();
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.querySelectorAll("[data-slider]").forEach((slider) => {
-      const slides = [...slider.querySelectorAll(".slide")];
-      const dots = [...slider.querySelectorAll(".slider-dots button")];
-      let current = 0;
-      const show = (index) => {
-        current = (index + slides.length) % slides.length;
-        slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
-        dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
-      };
-      slider.querySelector(".prev").addEventListener("click", () => show(current - 1));
-      slider.querySelector(".next").addEventListener("click", () => show(current + 1));
-      dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
-    });
-  </script>
-</body>
+        </footer>
+        <script>
+            const topbar = document.getElementById("topbar");
+            const updateHeader = () => topbar.classList.toggle("scrolled", window.scrollY > 18);
+            window.addEventListener("scroll", updateHeader, { passive: true });
+            updateHeader();
+            document.getElementById("year").textContent = new Date().getFullYear();
+            document.querySelectorAll("[data-slider]").forEach((slider) => {
+                const slides = [...slider.querySelectorAll(".slide")];
+                const dots = [...slider.querySelectorAll(".slider-dots button")];
+                let current = 0;
+                const show = (index) => {
+                    current = (index + slides.length) % slides.length;
+                    slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+                    dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+                };
+                slider.querySelector(".prev").addEventListener("click", () => show(current - 1));
+                slider.querySelector(".next").addEventListener("click", () => show(current + 1));
+                dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
+            });
+        </script>
+    </body>
 </html>
